@@ -1,20 +1,14 @@
-# derived from
-# https://github.com/actions/starter-workflows/blob/main/ci/node.js.yml
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# this workflow will run nodejs coverages and tests and
+# upload build-artifacts to branch-gh-pages
 name: CI
 on:
   push:
     branches:
-    - alpha
-    - beta
-    - master
-    - sandbox
-    # - none
-  # - pull_request:
-    # branches:
-    # - alpha
-    # - beta
+      - alpha
+      - beta
+      - master
+      - sandbox
+# shCiBase - start
 jobs:
   build:
     runs-on: ${{ matrix.os }}
@@ -43,9 +37,13 @@ jobs:
           architecture: ${{ matrix.architecture }}
       # fetch ci.sh from trusted source
       - run: git fetch origin alpha && git checkout origin/alpha ci.sh
-      - run: sh ci.sh shGithubCi
+      # run nodejs coverages and tests
+      - run: sh ci.sh shCiBase
+# shCiBase - end
+      # fetch ci.sh from trusted source
       - run: git fetch origin alpha && git checkout origin/alpha ci.sh
-      - run: sh ci.sh shGithubArtifactUpload
+      # upload build-artifacts to branch-gh-pages
+      - run: sh ci.sh shCiArtifactUpload
         env:
           CI_NODE_VERSION_ARCH_PLATFORM: v14.x64.linux
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
