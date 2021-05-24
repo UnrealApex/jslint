@@ -9,7 +9,8 @@
 /*property
     checked, create, disable, display, error, focus, forEach, function,
     getElementById, innerHTML, join, length, map, onchange, onclick, onscroll,
-    property, querySelectorAll, scrollTop, select, split, style, title, value
+    property, querySelectorAll, scrollTop, select, split, style, title, trim,
+    value
 */
 
 import jslint from "./jslint.js";
