@@ -56,11 +56,9 @@ result.warnings.forEach(function ({
 ## Description
 - [jslint.js](jslint.js) contains the jslint function. It parses and analyzes a source file, returning an object with information about the file. It can also take an object that sets options.
 
-- [index.html](index.html) runs the jslint.js function in a web page. The page also depends on `browser.js` and `report.js`.
+- [index.html](index.html) runs the jslint.js function in a web page. The page also depends on `browser.js`.
 
-- [browser.js](browser.js) runs the web user interface.
-
-- [report.js](report.js) generates the results reports in HTML.
+- [browser.js](browser.js) runs the web user interface and generates the results reports in HTML.
 
 - [help.html](help.html) describes JSLint's usage. Please [read it](https://jslint-org.github.io/jslint/help.html).
 
