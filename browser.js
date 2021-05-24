@@ -156,3 +156,29 @@ document.getElementById("JSLINT_CLEAR_OPTIONS").onclick = clear_options;
 fudge_change();
 source.select();
 source.focus();
+source.value = String(`
+/*jslint devel*/
+import jslint from "./jslint.js";
+import https from "https";
+(async function () {
+    let result;
+    result = await new Promise(function (resolve) {
+        https.request("https://www.jslint.com/jslint.js", function (res) {
+            result = "";
+            res.on("data", function (chunk) {
+                result += chunk;
+            }).on("end", function () {
+                resolve(result);
+            }).setEncoding("utf8");
+        }).end();
+    });
+    result = jslint(result);
+    result.warnings.forEach(function ({
+        formatted_message
+    }) {
+        console.error(formatted_message);
+    });
+}());
+`).trim();
+source.onchange();
+call_jslint();
