@@ -122,6 +122,7 @@ if (!globalThis.debugInline) {
 
 shCiArtifactUpload() {(set -e
 # this function will upload build-artifacts to branch-gh-pages
+    export NODE_OPTIONS="--unhandled-rejections=strict"
     node -e '
 process.exit(
     `${process.version.split(".")[0]}.${process.arch}.${process.platform}` !==
@@ -201,7 +202,10 @@ shCiBase() {(set -e
     mkdir -p .test-dir.js
     # coverage-hack - jslint invalid file
     touch .test-min.js
-    JSLINT_CLI=1 shRunWithCoverage node test.js .
+    (set -e
+        export JSLINT_CLI=1
+        shRunWithCoverage node test.js .
+    )
     # screenshot live-web-demo
     shBrowserScreenshot \
         https://jslint-org.github.io/jslint/branch.beta/index.html
@@ -228,7 +232,9 @@ shDirHttplinkValidate() {(set -e
 (async function () {
     "use strict";
     let dict = {};
-    Array.from(await require("fs").readdir(".")).forEach(async function (file) {
+    Array.from(
+        await require("fs").promises.readdir(".")
+    ).forEach(async function (file) {
         if (!(
             /.\.html$|.\.md$/m
         ).test(file)) {
@@ -236,7 +242,7 @@ shDirHttplinkValidate() {(set -e
         }
         let data = await require("fs").promises.readFile(file, "utf8");
         data.replace((
-            /\bhttps?:\/\/.*?(?:[")\]]|$)/gm
+            /\bhttps?:\/\/.*?(?:[\s")\]]|$)/gm
         ), function (url) {
             url = url.slice(0, -1).replace((
                 /[\u0022\u0027]/g
@@ -357,7 +363,7 @@ shGitLsTree() {(set -e
             resolve(child.stdout);
         });
     });
-    result = Array.from(result.matchAll(
+    result = Array.from(String(result).matchAll(
         /^(\S+?)\u0020+?\S+?\u0020+?\S+?\u0020+?(\S+?)\t(\S+?)$/gm
     )).map(function ([
         ignore, mode, size, file
@@ -421,7 +427,10 @@ shRunWithCoverage() {(set -e
     EXIT_CODE=0
     export DIR_COVERAGE=.build/coverage/
     rm -rf "$DIR_COVERAGE"
-    (export NODE_V8_COVERAGE="$DIR_COVERAGE" && "$@") || EXIT_CODE="$?"
+    (set -e
+        export NODE_V8_COVERAGE="$DIR_COVERAGE"
+        "$@"
+    ) || EXIT_CODE="$?"
     if [ "$EXIT_CODE" = 0 ]
     then
         node -e '
@@ -986,7 +995,7 @@ shRunWithScreenshotTxt() {(set -e
     rm -f "$SCREENSHOT_SVG"
     printf "0\n" > "$SCREENSHOT_SVG.exit_code"
     shCiPrint "shRunWithScreenshotTxt - (shRun $* 2>&1)"
-    (
+    (set -e
         (shRun "$@" 2>&1) || printf "$?\n" > "$SCREENSHOT_SVG.exit_code"
     ) | tee /tmp/shRunWithScreenshotTxt.txt
     EXIT_CODE="$(cat "$SCREENSHOT_SVG.exit_code")"
