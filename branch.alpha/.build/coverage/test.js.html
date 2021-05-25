@@ -112,12 +112,12 @@ body {
 <td class="coverageHigh">
             <a href="index.html">./ </a>test.js<br>
 <div class="percentbar">
-    <div style="width: 99.46%;"></div>
+    <div style="width: 100.00%;"></div>
 </div>
 </td>
 <td style="text-align: right;">
-    99.46 %<br>
-    555 / 558
+    100.00 %<br>
+    558 / 558
 </td>
 </tr></tbody>
 </table>
@@ -126,14 +126,14 @@ body {
 <pre><span class="lineno"><a href="#line_1" id="line_1">    1.</a></span><span class="count                ">      1</span><span>/*jslint node*/</span></pre>
 <pre><span class="lineno"><a href="#line_2" id="line_2">    2.</a></span><span class="count                ">      1</span><span>import jslint from &quot;./jslint.js&quot;;</span></pre>
 <pre><span class="lineno"><a href="#line_3" id="line_3">    3.</a></span><span class="count                ">      1</span><span></span></pre>
-<pre><span class="lineno"><a href="#line_4" id="line_4">    4.</a></span><span class="count                ">    252</span><span>function assertOrThrow(passed, err) {</span></pre>
-<pre><span class="lineno"><a href="#line_5" id="line_5">    5.</a></span><span class="count                ">    252</span><span>/*</span></pre>
-<pre><span class="lineno"><a href="#line_6" id="line_6">    6.</a></span><span class="count                ">    252</span><span> * this function will throw &lt;err&gt; if &lt;passed&gt; is falsy</span></pre>
-<pre><span class="lineno"><a href="#line_7" id="line_7">    7.</a></span><span class="count                ">    252</span><span> */</span></pre>
+<pre><span class="lineno"><a href="#line_4" id="line_4">    4.</a></span><span class="count                ">    253</span><span>function assertOrThrow(passed, err) {</span></pre>
+<pre><span class="lineno"><a href="#line_5" id="line_5">    5.</a></span><span class="count                ">    253</span><span>/*</span></pre>
+<pre><span class="lineno"><a href="#line_6" id="line_6">    6.</a></span><span class="count                ">    253</span><span> * this function will throw &lt;err&gt; if &lt;passed&gt; is falsy</span></pre>
+<pre><span class="lineno"><a href="#line_7" id="line_7">    7.</a></span><span class="count                ">    253</span><span> */</span></pre>
 <pre><span class="lineno"><a href="#line_8" id="line_8">    8.</a></span><span class="count                ">      1</span><span>    if (!passed) {</span></pre>
 <pre><span class="lineno"><a href="#line_9" id="line_9">    9.</a></span><span class="count                ">      1</span><span>        throw err;</span></pre>
 <pre><span class="lineno"><a href="#line_10" id="line_10">   10.</a></span><span class="count                ">      1</span><span>    }</span></pre>
-<pre><span class="lineno"><a href="#line_11" id="line_11">   11.</a></span><span class="count                ">    252</span><span>}</span></pre>
+<pre><span class="lineno"><a href="#line_11" id="line_11">   11.</a></span><span class="count                ">    253</span><span>}</span></pre>
 <pre><span class="lineno"><a href="#line_12" id="line_12">   12.</a></span><span class="count                ">      1</span><span></span></pre>
 <pre><span class="lineno"><a href="#line_13" id="line_13">   13.</a></span><span class="count                ">      1</span><span>function noop() {</span></pre>
 <pre><span class="lineno"><a href="#line_14" id="line_14">   14.</a></span><span class="count                ">      1</span><span>/*</span></pre>
@@ -146,9 +146,9 @@ body {
 <pre><span class="lineno"><a href="#line_21" id="line_21">   21.</a></span><span class="count                ">      1</span><span>/*</span></pre>
 <pre><span class="lineno"><a href="#line_22" id="line_22">   22.</a></span><span class="count                ">      1</span><span> * this function will test jslint&apos;s cli handling-behavior</span></pre>
 <pre><span class="lineno"><a href="#line_23" id="line_23">   23.</a></span><span class="count                ">      1</span><span> */</span></pre>
-<pre><span class="lineno"><a href="#line_24" id="line_24">   24.</a></span><span class="count                uncovered">      0</span><span></span><span class="uncovered">    process.exit = function (exitCode) {</span></pre>
-<pre><span class="lineno"><a href="#line_25" id="line_25">   25.</a></span><span class="count                uncovered">      0</span><span></span><span class="uncovered">        assertOrThrow(!exitCode, exitCode);</span></pre>
-<pre><span class="lineno"><a href="#line_26" id="line_26">   26.</a></span><span class="count                uncovered">      0</span><span></span><span class="uncovered">    };</span></pre>
+<pre><span class="lineno"><a href="#line_24" id="line_24">   24.</a></span><span class="count                ">      1</span><span>    process.exit = function (exitCode) {</span></pre>
+<pre><span class="lineno"><a href="#line_25" id="line_25">   25.</a></span><span class="count                ">      1</span><span>        assertOrThrow(!exitCode, exitCode);</span></pre>
+<pre><span class="lineno"><a href="#line_26" id="line_26">   26.</a></span><span class="count                ">      1</span><span>    };</span></pre>
 <pre><span class="lineno"><a href="#line_27" id="line_27">   27.</a></span><span class="count                ">      1</span><span>    jslint(&quot;&quot;, {</span></pre>
 <pre><span class="lineno"><a href="#line_28" id="line_28">   28.</a></span><span class="count                ">      1</span><span>        cli_mode: true,</span></pre>
 <pre><span class="lineno"><a href="#line_29" id="line_29">   29.</a></span><span class="count                ">      1</span><span>        file: &quot;jslint.js&quot;</span></pre>
