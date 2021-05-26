@@ -30,9 +30,7 @@ body {
 
 #JSLINT_TITLEBOX {
     font-family: "Daley", sans-serif;
-    margin: 0;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin: 10px 40px 0 40px;
     padding: 0;
 }
 
@@ -52,8 +50,8 @@ body {
     border: 0;
     clear: both;
     margin-bottom: 1em;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 40px;
+    margin-right: 40px;
     margin-top: 1em;
     padding: 0;
     width: auto;
@@ -352,7 +350,39 @@ a:link {
 }
 </style>
 </head>
-<body><div id="JSLINT_TITLEBOX">
+<body>
+<div id="bannerFork1" style="
+    height: 100px;
+    left: 0;
+    margin: 0;
+    opacity: 0.75;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 200px;
+    z-index: 99;
+">
+    <div style="
+    background: darkslategray;
+    font-size: 13px;
+    height: 20px;
+    line-height: 20px;
+    opacity: 0.75;
+    overflow: visible;
+    position: absolute;
+    right: 60px;
+    text-align: center;
+    top: 30px;
+    transform: rotate(-45deg);
+    width: 100%;
+">
+    <a href="https://github.com/jslint-org/jslint" style="color: #fff;" target="_blank">
+    fork on github
+    </a>
+    </div>
+</div>
+<div id="JSLINT_TITLEBOX">
     <div>JSLint</div>
     <ul>
         <li><a href="help.html">Read the instructions.</a></li>
@@ -367,19 +397,19 @@ a:link {
       <button name="JSLint">JSLint</button>
       <button name="clear">clear</button>
   </div>
-  <fieldset id="JSLINT_WARNINGS" class="none">
+  <fieldset id="JSLINT_WARNINGS" class="none" style="display: none;">
     <legend>Warnings</legend>
     <div id="JSLINT_WARNINGS_LIST"></div>
   </fieldset>
-  <fieldset id="JSLINT_REPORT" class="none">
+  <fieldset id="JSLINT_REPORT" class="none" style="display: block;">
     <legend>Function Report</legend>
-    <div id="JSLINT_REPORT_LIST"></div>
+    <div id="JSLINT_REPORT_LIST"><dl class="level0"><dt>module</dt><dd>Promise, console, https, jslint</dd><dt>import from</dt><dd>./jslint.js, https</dd></dl><dl class="level1"><address>4</address><dfn><b>«async»</b>()</dfn><dt>variable</dt><dd>result</dd><dt>closure</dt><dd>result</dd><dt>module</dt><dd>Promise, jslint</dd></dl><dl class="level2"><address>6</address><dfn><b>«Promise»</b>(resolve)</dfn><dt>parameter</dt><dd>resolve</dd><dt>closure</dt><dd>resolve</dd><dt>module</dt><dd>https</dd></dl><dl class="level3"><address>7</address><dfn><b>«request»</b>(res)</dfn><dt>parameter</dt><dd>res</dd><dt>outer</dt><dd>result</dd></dl><dl class="level4"><address>9</address><dfn><b>«data»</b>(chunk)</dfn><dt>parameter</dt><dd>chunk</dd><dt>outer</dt><dd>result</dd></dl><dl class="level4"><address>11</address><dfn><b>«end»</b>()</dfn><dt>outer</dt><dd>resolve, result</dd></dl><dl class="level2"><address>17</address><dfn><b>«forEach»</b>({formatted_message})</dfn><dt>parameter</dt><dd>formatted_message</dd><dt>module</dt><dd>console</dd></dl><center>JSLint edition v2021.5.26</center></div>
   </fieldset>
-  <fieldset id="JSLINT_PROPERTYFIELDSET" class="none">
+  <fieldset id="JSLINT_PROPERTYFIELDSET" class="none" style="display: block;">
     <legend>Property Directive</legend>
     <textarea id="JSLINT_PROPERTY" rows="8" readonly=""></textarea>
   </fieldset>
-  <div id="JSLINT_AUX" class="none center">
+  <div id="JSLINT_AUX" class="none center" style="display: block;">
       <button name="select" id="JSLINT_SELECT">select property</button>
       <button name="JSLint">JSLint</button>
       <button name="clear">clear</button>
