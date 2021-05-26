@@ -129,7 +129,7 @@ body {
 <div class="content">
 <pre><span class="lineno"><a href="#line_1" id="line_1">    1.</a></span><span class="count                ">      1</span><span>#!/usr/bin/env node</span></pre>
 <pre><span class="lineno"><a href="#line_2" id="line_2">    2.</a></span><span class="count                ">      1</span><span>// jslint.js</span></pre>
-<pre><span class="lineno"><a href="#line_3" id="line_3">    3.</a></span><span class="count                ">      1</span><span>// v2021.5.24-beta</span></pre>
+<pre><span class="lineno"><a href="#line_3" id="line_3">    3.</a></span><span class="count                ">      1</span><span>// v2021.5.26</span></pre>
 <pre><span class="lineno"><a href="#line_4" id="line_4">    4.</a></span><span class="count                ">      1</span><span>// Copyright (c) 2015 Douglas Crockford  (www.JSLint.com)</span></pre>
 <pre><span class="lineno"><a href="#line_5" id="line_5">    5.</a></span><span class="count                ">      1</span><span></span></pre>
 <pre><span class="lineno"><a href="#line_6" id="line_6">    6.</a></span><span class="count                ">      1</span><span>// Permission is hereby granted, free of charge, to any person obtaining a copy</span></pre>
@@ -218,33 +218,33 @@ body {
 <pre><span class="lineno"><a href="#line_89" id="line_89">   89.</a></span><span class="count                ">      1</span><span>/*jslint node*/</span></pre>
 <pre><span class="lineno"><a href="#line_90" id="line_90">   90.</a></span><span class="count                ">      1</span><span></span></pre>
 <pre><span class="lineno"><a href="#line_91" id="line_91">   91.</a></span><span class="count                ">      1</span><span>/*property</span></pre>
-<pre><span class="lineno"><a href="#line_92" id="line_92">   92.</a></span><span class="count                ">      1</span><span>    JSLINT_CLI, console_error, env, promises, source, test_uncaught_error,</span></pre>
-<pre><span class="lineno"><a href="#line_93" id="line_93">   93.</a></span><span class="count                ">      1</span><span>    a, all, and, argv, arity, assign, b, bad_assignment_a, bad_directive_a,</span></pre>
-<pre><span class="lineno"><a href="#line_94" id="line_94">   94.</a></span><span class="count                ">      1</span><span>    bad_get, bad_module_name_a, bad_option_a, bad_property_a, bad_set, bitwise,</span></pre>
-<pre><span class="lineno"><a href="#line_95" id="line_95">   95.</a></span><span class="count                ">      1</span><span>    block, body, browser, c, calls, catch, cli_mode, closer, closure, code,</span></pre>
-<pre><span class="lineno"><a href="#line_96" id="line_96">   96.</a></span><span class="count                ">      1</span><span>    column, concat, constant, context, convert, couch, create, d, dead, debug,</span></pre>
-<pre><span class="lineno"><a href="#line_97" id="line_97">   97.</a></span><span class="count                ">      1</span><span>    default, devel, directive, directives, disrupt, dot, duplicate_a,</span></pre>
-<pre><span class="lineno"><a href="#line_98" id="line_98">   98.</a></span><span class="count                ">      1</span><span>    early_stop, edition, ellipsis, else, empty_block, error, eval, every, exec,</span></pre>
-<pre><span class="lineno"><a href="#line_99" id="line_99">   99.</a></span><span class="count                ">      1</span><span>    exit, expected_a, expected_a_at_b_c, expected_a_b, expected_a_b_from_c_d,</span></pre>
-<pre><span class="lineno"><a href="#line_100" id="line_100">  100.</a></span><span class="count                ">      1</span><span>    expected_a_before_b, expected_a_next_at_b, expected_digits_after_a,</span></pre>
-<pre><span class="lineno"><a href="#line_101" id="line_101">  101.</a></span><span class="count                ">      1</span><span>    expected_four_digits, expected_identifier_a, expected_line_break_a_b,</span></pre>
-<pre><span class="lineno"><a href="#line_102" id="line_102">  102.</a></span><span class="count                ">      1</span><span>    expected_regexp_factor_a, expected_space_a_b, expected_statements_a,</span></pre>
-<pre><span class="lineno"><a href="#line_103" id="line_103">  103.</a></span><span class="count                ">      1</span><span>    expected_string_a, expected_type_string_a, exports, expression, extra, file,</span></pre>
-<pre><span class="lineno"><a href="#line_104" id="line_104">  104.</a></span><span class="count                ">      1</span><span>    finally, flag, for, forEach, formatted_message, free, freeze,</span></pre>
-<pre><span class="lineno"><a href="#line_105" id="line_105">  105.</a></span><span class="count                ">      1</span><span>    freeze_exports, from, froms, fud, fudge, function_in_loop, functions, g,</span></pre>
-<pre><span class="lineno"><a href="#line_106" id="line_106">  106.</a></span><span class="count                ">      1</span><span>    getset, global, has_await, i, id, identifier, import, inc, indexOf,</span></pre>
-<pre><span class="lineno"><a href="#line_107" id="line_107">  107.</a></span><span class="count                ">      1</span><span>    infix_in, init, initial, isArray, isNaN, is_async, join, json, keys, label,</span></pre>
-<pre><span class="lineno"><a href="#line_108" id="line_108">  108.</a></span><span class="count                ">      1</span><span>    label_a, lbp, led, length, level, line, line_offset, lines, live, long,</span></pre>
-<pre><span class="lineno"><a href="#line_109" id="line_109">  109.</a></span><span class="count                ">      1</span><span>    loop, m, map, margin, match, message, misplaced_a, misplaced_directive_a,</span></pre>
-<pre><span class="lineno"><a href="#line_110" id="line_110">  110.</a></span><span class="count                ">      1</span><span>    missing_await_statement, missing_browser, missing_m, module, naked_block,</span></pre>
-<pre><span class="lineno"><a href="#line_111" id="line_111">  111.</a></span><span class="count                ">      1</span><span>    name, names, nested_comment, new, node, not_label_a, now, nr, nud,</span></pre>
-<pre><span class="lineno"><a href="#line_112" id="line_112">  112.</a></span><span class="count                ">      1</span><span>    number_isNaN, ok, open, opening, option, out_of_scope_a, padStart,</span></pre>
-<pre><span class="lineno"><a href="#line_113" id="line_113">  113.</a></span><span class="count                ">      1</span><span>    parameters, parent, pop, property, push, quote, raw, readFile, readdir,</span></pre>
-<pre><span class="lineno"><a href="#line_114" id="line_114">  114.</a></span><span class="count                ">      1</span><span>    redefinition_a_b, repeat, replace, required_a_optional_b, reserved_a, role,</span></pre>
-<pre><span class="lineno"><a href="#line_115" id="line_115">  115.</a></span><span class="count                ">      1</span><span>    search, shebang, signature, single, slice, some, sort, split, stack,</span></pre>
-<pre><span class="lineno"><a href="#line_116" id="line_116">  116.</a></span><span class="count                ">      1</span><span>    stack_trace, startsWith, statement, stop, subscript_a, switch, test, then,</span></pre>
-<pre><span class="lineno"><a href="#line_117" id="line_117">  117.</a></span><span class="count                ">      1</span><span>    this, thru, todo_comment, tokens, too_long, too_many_digits, tree, trim,</span></pre>
-<pre><span class="lineno"><a href="#line_118" id="line_118">  118.</a></span><span class="count                ">      1</span><span>    try, type, u, unclosed_comment, unclosed_mega, unclosed_string,</span></pre>
+<pre><span class="lineno"><a href="#line_92" id="line_92">   92.</a></span><span class="count                ">      1</span><span>    JSLINT_CLI, a, all, and, argv, arity, assign, b, bad_assignment_a,</span></pre>
+<pre><span class="lineno"><a href="#line_93" id="line_93">   93.</a></span><span class="count                ">      1</span><span>    bad_directive_a, bad_get, bad_module_name_a, bad_option_a, bad_property_a,</span></pre>
+<pre><span class="lineno"><a href="#line_94" id="line_94">   94.</a></span><span class="count                ">      1</span><span>    bad_set, bitwise, block, body, browser, c, calls, catch, cli_mode, closer,</span></pre>
+<pre><span class="lineno"><a href="#line_95" id="line_95">   95.</a></span><span class="count                ">      1</span><span>    closure, code, column, concat, console_error, constant, context, convert,</span></pre>
+<pre><span class="lineno"><a href="#line_96" id="line_96">   96.</a></span><span class="count                ">      1</span><span>    couch, create, d, dead, debug, default, devel, directive, directives,</span></pre>
+<pre><span class="lineno"><a href="#line_97" id="line_97">   97.</a></span><span class="count                ">      1</span><span>    disrupt, dot, duplicate_a, early_stop, edition, ellipsis, else, empty_block,</span></pre>
+<pre><span class="lineno"><a href="#line_98" id="line_98">   98.</a></span><span class="count                ">      1</span><span>    env, error, eval, every, exec, exit, expected_a, expected_a_at_b_c,</span></pre>
+<pre><span class="lineno"><a href="#line_99" id="line_99">   99.</a></span><span class="count                ">      1</span><span>    expected_a_b, expected_a_b_from_c_d, expected_a_before_b,</span></pre>
+<pre><span class="lineno"><a href="#line_100" id="line_100">  100.</a></span><span class="count                ">      1</span><span>    expected_a_next_at_b, expected_digits_after_a, expected_four_digits,</span></pre>
+<pre><span class="lineno"><a href="#line_101" id="line_101">  101.</a></span><span class="count                ">      1</span><span>    expected_identifier_a, expected_line_break_a_b, expected_regexp_factor_a,</span></pre>
+<pre><span class="lineno"><a href="#line_102" id="line_102">  102.</a></span><span class="count                ">      1</span><span>    expected_space_a_b, expected_statements_a, expected_string_a,</span></pre>
+<pre><span class="lineno"><a href="#line_103" id="line_103">  103.</a></span><span class="count                ">      1</span><span>    expected_type_string_a, exports, expression, extra, file, finally, flag,</span></pre>
+<pre><span class="lineno"><a href="#line_104" id="line_104">  104.</a></span><span class="count                ">      1</span><span>    for, forEach, formatted_message, free, freeze, freeze_exports, from, froms,</span></pre>
+<pre><span class="lineno"><a href="#line_105" id="line_105">  105.</a></span><span class="count                ">      1</span><span>    fud, fudge, function_in_loop, functions, g, getset, global, has_await, i,</span></pre>
+<pre><span class="lineno"><a href="#line_106" id="line_106">  106.</a></span><span class="count                ">      1</span><span>    id, identifier, import, inc, indexOf, infix_in, init, initial, isArray,</span></pre>
+<pre><span class="lineno"><a href="#line_107" id="line_107">  107.</a></span><span class="count                ">      1</span><span>    isNaN, is_async, join, json, keys, label, label_a, lbp, led, length, level,</span></pre>
+<pre><span class="lineno"><a href="#line_108" id="line_108">  108.</a></span><span class="count                ">      1</span><span>    line, line_offset, lines, live, long, loop, m, map, margin, match, message,</span></pre>
+<pre><span class="lineno"><a href="#line_109" id="line_109">  109.</a></span><span class="count                ">      1</span><span>    misplaced_a, misplaced_directive_a, missing_await_statement,</span></pre>
+<pre><span class="lineno"><a href="#line_110" id="line_110">  110.</a></span><span class="count                ">      1</span><span>    missing_browser, missing_m, module, naked_block, name, names,</span></pre>
+<pre><span class="lineno"><a href="#line_111" id="line_111">  111.</a></span><span class="count                ">      1</span><span>    nested_comment, node, not_label_a, now, nr, nud, number_isNaN, ok, open,</span></pre>
+<pre><span class="lineno"><a href="#line_112" id="line_112">  112.</a></span><span class="count                ">      1</span><span>    opening, option, out_of_scope_a, padStart, parameters, parent, pop,</span></pre>
+<pre><span class="lineno"><a href="#line_113" id="line_113">  113.</a></span><span class="count                ">      1</span><span>    promises, property, push, quote, raw, readFile, readdir, redefinition_a_b,</span></pre>
+<pre><span class="lineno"><a href="#line_114" id="line_114">  114.</a></span><span class="count                ">      1</span><span>    repeat, replace, required_a_optional_b, reserved_a, role, search, shebang,</span></pre>
+<pre><span class="lineno"><a href="#line_115" id="line_115">  115.</a></span><span class="count                ">      1</span><span>    signature, single, slice, some, sort, source, split, stack, stack_trace,</span></pre>
+<pre><span class="lineno"><a href="#line_116" id="line_116">  116.</a></span><span class="count                ">      1</span><span>    startsWith, statement, stop, subscript_a, switch, test, test_uncaught_error,</span></pre>
+<pre><span class="lineno"><a href="#line_117" id="line_117">  117.</a></span><span class="count                ">      1</span><span>    then, this, thru, todo_comment, tokens, too_long, too_many_digits, tree,</span></pre>
+<pre><span class="lineno"><a href="#line_118" id="line_118">  118.</a></span><span class="count                ">      1</span><span>    trim, try, type, u, unclosed_comment, unclosed_mega, unclosed_string,</span></pre>
 <pre><span class="lineno"><a href="#line_119" id="line_119">  119.</a></span><span class="count                ">      1</span><span>    undeclared_a, unexpected_a, unexpected_a_after_b, unexpected_a_before_b,</span></pre>
 <pre><span class="lineno"><a href="#line_120" id="line_120">  120.</a></span><span class="count                ">      1</span><span>    unexpected_at_top_level_a, unexpected_char_a, unexpected_comment,</span></pre>
 <pre><span class="lineno"><a href="#line_121" id="line_121">  121.</a></span><span class="count                ">      1</span><span>    unexpected_directive_a, unexpected_expression_a, unexpected_label_a,</span></pre>
@@ -829,12 +829,12 @@ body {
 <pre><span class="lineno"><a href="#line_700" id="line_700">  700.</a></span><span class="count                ">   5093</span><span>        snippet = snippet.slice(0, -1);</span></pre>
 <pre><span class="lineno"><a href="#line_701" id="line_701">  701.</a></span><span class="count                ">   5093</span><span>    }</span></pre>
 <pre><span class="lineno"><a href="#line_702" id="line_702">  702.</a></span><span class="count                ">    280</span><span></span></pre>
-<pre><span class="lineno"><a href="#line_703" id="line_703">  703.</a></span><span class="count                ">  37271</span><span>    function next_char(match) {</span></pre>
-<pre><span class="lineno"><a href="#line_704" id="line_704">  704.</a></span><span class="count                ">  37271</span><span></span></pre>
-<pre><span class="lineno"><a href="#line_705" id="line_705">  705.</a></span><span class="count                ">  37271</span><span>// Get the next character from the source line. Remove it from the source_line,</span></pre>
-<pre><span class="lineno"><a href="#line_706" id="line_706">  706.</a></span><span class="count                ">  37271</span><span>// and append it to the snippet. Optionally check that the previous character</span></pre>
-<pre><span class="lineno"><a href="#line_707" id="line_707">  707.</a></span><span class="count                ">  37271</span><span>// matched an expected value.</span></pre>
-<pre><span class="lineno"><a href="#line_708" id="line_708">  708.</a></span><span class="count                ">  37271</span><span></span></pre>
+<pre><span class="lineno"><a href="#line_703" id="line_703">  703.</a></span><span class="count                ">  37261</span><span>    function next_char(match) {</span></pre>
+<pre><span class="lineno"><a href="#line_704" id="line_704">  704.</a></span><span class="count                ">  37261</span><span></span></pre>
+<pre><span class="lineno"><a href="#line_705" id="line_705">  705.</a></span><span class="count                ">  37261</span><span>// Get the next character from the source line. Remove it from the source_line,</span></pre>
+<pre><span class="lineno"><a href="#line_706" id="line_706">  706.</a></span><span class="count                ">  37261</span><span>// and append it to the snippet. Optionally check that the previous character</span></pre>
+<pre><span class="lineno"><a href="#line_707" id="line_707">  707.</a></span><span class="count                ">  37261</span><span>// matched an expected value.</span></pre>
+<pre><span class="lineno"><a href="#line_708" id="line_708">  708.</a></span><span class="count                ">  37261</span><span></span></pre>
 <pre><span class="lineno"><a href="#line_709" id="line_709">  709.</a></span><span class="count                ">    762</span><span>        if (match !== undefined &amp;&amp; char !== match) {</span></pre>
 <pre><span class="lineno"><a href="#line_710" id="line_710">  710.</a></span><span class="count                ">      3</span><span>            return stop_at(</span></pre>
 <pre><span class="lineno"><a href="#line_711" id="line_711">  711.</a></span><span class="count                ">      3</span><span>                (</span></pre>
@@ -847,18 +847,18 @@ body {
 <pre><span class="lineno"><a href="#line_718" id="line_718">  718.</a></span><span class="count                ">      3</span><span>                match,</span></pre>
 <pre><span class="lineno"><a href="#line_719" id="line_719">  719.</a></span><span class="count                ">      3</span><span>                char</span></pre>
 <pre><span class="lineno"><a href="#line_720" id="line_720">  720.</a></span><span class="count                ">      3</span><span>            );</span></pre>
-<pre><span class="lineno"><a href="#line_721" id="line_721">  721.</a></span><span class="count                ">  37268</span><span>        }</span></pre>
-<pre><span class="lineno"><a href="#line_722" id="line_722">  722.</a></span><span class="count                ">  37268</span><span>        if (source_line) {</span></pre>
-<pre><span class="lineno"><a href="#line_723" id="line_723">  723.</a></span><span class="count                ">  37149</span><span>            char = source_line[0];</span></pre>
-<pre><span class="lineno"><a href="#line_724" id="line_724">  724.</a></span><span class="count                ">  37149</span><span>            source_line = source_line.slice(1);</span></pre>
-<pre><span class="lineno"><a href="#line_725" id="line_725">  725.</a></span><span class="count                ">  37149</span><span>            snippet += char;</span></pre>
-<pre><span class="lineno"><a href="#line_726" id="line_726">  726.</a></span><span class="count                ">  37149</span><span>        } else {</span></pre>
+<pre><span class="lineno"><a href="#line_721" id="line_721">  721.</a></span><span class="count                ">  37258</span><span>        }</span></pre>
+<pre><span class="lineno"><a href="#line_722" id="line_722">  722.</a></span><span class="count                ">  37258</span><span>        if (source_line) {</span></pre>
+<pre><span class="lineno"><a href="#line_723" id="line_723">  723.</a></span><span class="count                ">  37139</span><span>            char = source_line[0];</span></pre>
+<pre><span class="lineno"><a href="#line_724" id="line_724">  724.</a></span><span class="count                ">  37139</span><span>            source_line = source_line.slice(1);</span></pre>
+<pre><span class="lineno"><a href="#line_725" id="line_725">  725.</a></span><span class="count                ">  37139</span><span>            snippet += char;</span></pre>
+<pre><span class="lineno"><a href="#line_726" id="line_726">  726.</a></span><span class="count                ">  37139</span><span>        } else {</span></pre>
 <pre><span class="lineno"><a href="#line_727" id="line_727">  727.</a></span><span class="count                ">    119</span><span>            char = &quot;&quot;;</span></pre>
 <pre><span class="lineno"><a href="#line_728" id="line_728">  728.</a></span><span class="count                ">    119</span><span>            snippet += &quot; &quot;;</span></pre>
-<pre><span class="lineno"><a href="#line_729" id="line_729">  729.</a></span><span class="count                ">  37268</span><span>        }</span></pre>
-<pre><span class="lineno"><a href="#line_730" id="line_730">  730.</a></span><span class="count                ">  37268</span><span>        column += 1;</span></pre>
-<pre><span class="lineno"><a href="#line_731" id="line_731">  731.</a></span><span class="count                ">  37268</span><span>        return char;</span></pre>
-<pre><span class="lineno"><a href="#line_732" id="line_732">  732.</a></span><span class="count                ">  37268</span><span>    }</span></pre>
+<pre><span class="lineno"><a href="#line_729" id="line_729">  729.</a></span><span class="count                ">  37258</span><span>        }</span></pre>
+<pre><span class="lineno"><a href="#line_730" id="line_730">  730.</a></span><span class="count                ">  37258</span><span>        column += 1;</span></pre>
+<pre><span class="lineno"><a href="#line_731" id="line_731">  731.</a></span><span class="count                ">  37258</span><span>        return char;</span></pre>
+<pre><span class="lineno"><a href="#line_732" id="line_732">  732.</a></span><span class="count                ">  37258</span><span>    }</span></pre>
 <pre><span class="lineno"><a href="#line_733" id="line_733">  733.</a></span><span class="count                ">    280</span><span></span></pre>
 <pre><span class="lineno"><a href="#line_734" id="line_734">  734.</a></span><span class="count                ">   1101</span><span>    function back_char() {</span></pre>
 <pre><span class="lineno"><a href="#line_735" id="line_735">  735.</a></span><span class="count                ">   1101</span><span></span></pre>
@@ -984,52 +984,52 @@ body {
 <pre><span class="lineno"><a href="#line_855" id="line_855">  855.</a></span><span class="count                ">  56076</span><span>        return the_token;</span></pre>
 <pre><span class="lineno"><a href="#line_856" id="line_856">  856.</a></span><span class="count                ">  56076</span><span>    }</span></pre>
 <pre><span class="lineno"><a href="#line_857" id="line_857">  857.</a></span><span class="count                ">    280</span><span></span></pre>
-<pre><span class="lineno"><a href="#line_858" id="line_858">  858.</a></span><span class="count                ">    594</span><span>    function parse_directive(the_comment, body) {</span></pre>
-<pre><span class="lineno"><a href="#line_859" id="line_859">  859.</a></span><span class="count                ">    594</span><span></span></pre>
-<pre><span class="lineno"><a href="#line_860" id="line_860">  860.</a></span><span class="count                ">    594</span><span>// JSLint recognizes three directives that can be encoded in comments. This</span></pre>
-<pre><span class="lineno"><a href="#line_861" id="line_861">  861.</a></span><span class="count                ">    594</span><span>// function processes one item, and calls itself recursively to process the</span></pre>
-<pre><span class="lineno"><a href="#line_862" id="line_862">  862.</a></span><span class="count                ">    594</span><span>// next one.</span></pre>
-<pre><span class="lineno"><a href="#line_863" id="line_863">  863.</a></span><span class="count                ">    594</span><span></span></pre>
-<pre><span class="lineno"><a href="#line_864" id="line_864">  864.</a></span><span class="count                ">    594</span><span>        const result = body.match(rx_directive_part);</span></pre>
-<pre><span class="lineno"><a href="#line_865" id="line_865">  865.</a></span><span class="count                ">    564</span><span>        if (result) {</span></pre>
-<pre><span class="lineno"><a href="#line_866" id="line_866">  866.</a></span><span class="count                ">    564</span><span>            let allowed;</span></pre>
-<pre><span class="lineno"><a href="#line_867" id="line_867">  867.</a></span><span class="count                ">    564</span><span>            const name = result[1];</span></pre>
-<pre><span class="lineno"><a href="#line_868" id="line_868">  868.</a></span><span class="count                ">    564</span><span>            const value = result[2];</span></pre>
-<pre><span class="lineno"><a href="#line_869" id="line_869">  869.</a></span><span class="count                ">    564</span><span>            if (the_comment.directive === &quot;jslint&quot;) {</span></pre>
-<pre><span class="lineno"><a href="#line_870" id="line_870">  870.</a></span><span class="count                ">    564</span><span>                allowed = allowed_option[name];</span></pre>
-<pre><span class="lineno"><a href="#line_871" id="line_871">  871.</a></span><span class="count                ">    564</span><span>                if (</span></pre>
-<pre><span class="lineno"><a href="#line_872" id="line_872">  872.</a></span><span class="count                ">    564</span><span>                    typeof allowed === &quot;boolean&quot;</span></pre>
-<pre><span class="lineno"><a href="#line_873" id="line_873">  873.</a></span><span class="count                ">    564</span><span>                    || typeof allowed === &quot;object&quot;</span></pre>
-<pre><span class="lineno"><a href="#line_874" id="line_874">  874.</a></span><span class="count                ">    564</span><span>                ) {</span></pre>
-<pre><span class="lineno"><a href="#line_875" id="line_875">  875.</a></span><span class="count                ">    564</span><span>                    if (value === &quot;true&quot; || value === undefined) {</span></pre>
-<pre><span class="lineno"><a href="#line_876" id="line_876">  876.</a></span><span class="count                ">    564</span><span>                        option[name] = true;</span></pre>
-<pre><span class="lineno"><a href="#line_877" id="line_877">  877.</a></span><span class="count                ">    564</span><span>                        if (Array.isArray(allowed)) {</span></pre>
-<pre><span class="lineno"><a href="#line_878" id="line_878">  878.</a></span><span class="count                ">    564</span><span>                            populate(allowed, declared_globals, false);</span></pre>
-<pre><span class="lineno"><a href="#line_879" id="line_879">  879.</a></span><span class="count                ">    564</span><span>                        }</span></pre>
-<pre><span class="lineno"><a href="#line_880" id="line_880">  880.</a></span><span class="count                ">    564</span><span>                    } else if (value === &quot;false&quot;) {</span></pre>
-<pre><span class="lineno"><a href="#line_881" id="line_881">  881.</a></span><span class="count                ">    564</span><span>                        option[name] = false;</span></pre>
-<pre><span class="lineno"><a href="#line_882" id="line_882">  882.</a></span><span class="count                ">    564</span><span>                    }</span></pre>
-<pre><span class="lineno"><a href="#line_883" id="line_883">  883.</a></span><span class="count                ">    564</span><span>                } else {</span></pre>
-<pre><span class="lineno"><a href="#line_884" id="line_884">  884.</a></span><span class="count                ">    564</span><span>                    warn(&quot;bad_option_a&quot;, the_comment, name);</span></pre>
-<pre><span class="lineno"><a href="#line_885" id="line_885">  885.</a></span><span class="count                ">    564</span><span>                }</span></pre>
-<pre><span class="lineno"><a href="#line_886" id="line_886">  886.</a></span><span class="count                ">    564</span><span>            } else if (the_comment.directive === &quot;property&quot;) {</span></pre>
-<pre><span class="lineno"><a href="#line_887" id="line_887">  887.</a></span><span class="count                ">    564</span><span>                if (tenure === undefined) {</span></pre>
-<pre><span class="lineno"><a href="#line_888" id="line_888">  888.</a></span><span class="count                ">    564</span><span>                    tenure = empty();</span></pre>
-<pre><span class="lineno"><a href="#line_889" id="line_889">  889.</a></span><span class="count                ">    564</span><span>                }</span></pre>
-<pre><span class="lineno"><a href="#line_890" id="line_890">  890.</a></span><span class="count                ">    564</span><span>                tenure[name] = true;</span></pre>
-<pre><span class="lineno"><a href="#line_891" id="line_891">  891.</a></span><span class="count                ">    564</span><span>            } else if (the_comment.directive === &quot;global&quot;) {</span></pre>
-<pre><span class="lineno"><a href="#line_892" id="line_892">  892.</a></span><span class="count                ">    564</span><span>                if (value) {</span></pre>
-<pre><span class="lineno"><a href="#line_893" id="line_893">  893.</a></span><span class="count                ">    564</span><span>                    warn(&quot;bad_option_a&quot;, the_comment, name + &quot;:&quot; + value);</span></pre>
-<pre><span class="lineno"><a href="#line_894" id="line_894">  894.</a></span><span class="count                ">    564</span><span>                }</span></pre>
-<pre><span class="lineno"><a href="#line_895" id="line_895">  895.</a></span><span class="count                ">    564</span><span>                declared_globals[name] = false;</span></pre>
-<pre><span class="lineno"><a href="#line_896" id="line_896">  896.</a></span><span class="count                ">    564</span><span>                module_mode = the_comment;</span></pre>
-<pre><span class="lineno"><a href="#line_897" id="line_897">  897.</a></span><span class="count                ">    564</span><span>            }</span></pre>
-<pre><span class="lineno"><a href="#line_898" id="line_898">  898.</a></span><span class="count                ">    564</span><span>            return parse_directive(the_comment, result[3]);</span></pre>
-<pre><span class="lineno"><a href="#line_899" id="line_899">  899.</a></span><span class="count                ">    564</span><span>        }</span></pre>
+<pre><span class="lineno"><a href="#line_858" id="line_858">  858.</a></span><span class="count                ">    592</span><span>    function parse_directive(the_comment, body) {</span></pre>
+<pre><span class="lineno"><a href="#line_859" id="line_859">  859.</a></span><span class="count                ">    592</span><span></span></pre>
+<pre><span class="lineno"><a href="#line_860" id="line_860">  860.</a></span><span class="count                ">    592</span><span>// JSLint recognizes three directives that can be encoded in comments. This</span></pre>
+<pre><span class="lineno"><a href="#line_861" id="line_861">  861.</a></span><span class="count                ">    592</span><span>// function processes one item, and calls itself recursively to process the</span></pre>
+<pre><span class="lineno"><a href="#line_862" id="line_862">  862.</a></span><span class="count                ">    592</span><span>// next one.</span></pre>
+<pre><span class="lineno"><a href="#line_863" id="line_863">  863.</a></span><span class="count                ">    592</span><span></span></pre>
+<pre><span class="lineno"><a href="#line_864" id="line_864">  864.</a></span><span class="count                ">    592</span><span>        const result = body.match(rx_directive_part);</span></pre>
+<pre><span class="lineno"><a href="#line_865" id="line_865">  865.</a></span><span class="count                ">    562</span><span>        if (result) {</span></pre>
+<pre><span class="lineno"><a href="#line_866" id="line_866">  866.</a></span><span class="count                ">    562</span><span>            let allowed;</span></pre>
+<pre><span class="lineno"><a href="#line_867" id="line_867">  867.</a></span><span class="count                ">    562</span><span>            const name = result[1];</span></pre>
+<pre><span class="lineno"><a href="#line_868" id="line_868">  868.</a></span><span class="count                ">    562</span><span>            const value = result[2];</span></pre>
+<pre><span class="lineno"><a href="#line_869" id="line_869">  869.</a></span><span class="count                ">    562</span><span>            if (the_comment.directive === &quot;jslint&quot;) {</span></pre>
+<pre><span class="lineno"><a href="#line_870" id="line_870">  870.</a></span><span class="count                ">    562</span><span>                allowed = allowed_option[name];</span></pre>
+<pre><span class="lineno"><a href="#line_871" id="line_871">  871.</a></span><span class="count                ">    562</span><span>                if (</span></pre>
+<pre><span class="lineno"><a href="#line_872" id="line_872">  872.</a></span><span class="count                ">    562</span><span>                    typeof allowed === &quot;boolean&quot;</span></pre>
+<pre><span class="lineno"><a href="#line_873" id="line_873">  873.</a></span><span class="count                ">    562</span><span>                    || typeof allowed === &quot;object&quot;</span></pre>
+<pre><span class="lineno"><a href="#line_874" id="line_874">  874.</a></span><span class="count                ">    562</span><span>                ) {</span></pre>
+<pre><span class="lineno"><a href="#line_875" id="line_875">  875.</a></span><span class="count                ">    562</span><span>                    if (value === &quot;true&quot; || value === undefined) {</span></pre>
+<pre><span class="lineno"><a href="#line_876" id="line_876">  876.</a></span><span class="count                ">    562</span><span>                        option[name] = true;</span></pre>
+<pre><span class="lineno"><a href="#line_877" id="line_877">  877.</a></span><span class="count                ">    562</span><span>                        if (Array.isArray(allowed)) {</span></pre>
+<pre><span class="lineno"><a href="#line_878" id="line_878">  878.</a></span><span class="count                ">    562</span><span>                            populate(allowed, declared_globals, false);</span></pre>
+<pre><span class="lineno"><a href="#line_879" id="line_879">  879.</a></span><span class="count                ">    562</span><span>                        }</span></pre>
+<pre><span class="lineno"><a href="#line_880" id="line_880">  880.</a></span><span class="count                ">    562</span><span>                    } else if (value === &quot;false&quot;) {</span></pre>
+<pre><span class="lineno"><a href="#line_881" id="line_881">  881.</a></span><span class="count                ">    562</span><span>                        option[name] = false;</span></pre>
+<pre><span class="lineno"><a href="#line_882" id="line_882">  882.</a></span><span class="count                ">    562</span><span>                    }</span></pre>
+<pre><span class="lineno"><a href="#line_883" id="line_883">  883.</a></span><span class="count                ">    562</span><span>                } else {</span></pre>
+<pre><span class="lineno"><a href="#line_884" id="line_884">  884.</a></span><span class="count                ">    562</span><span>                    warn(&quot;bad_option_a&quot;, the_comment, name);</span></pre>
+<pre><span class="lineno"><a href="#line_885" id="line_885">  885.</a></span><span class="count                ">    562</span><span>                }</span></pre>
+<pre><span class="lineno"><a href="#line_886" id="line_886">  886.</a></span><span class="count                ">    562</span><span>            } else if (the_comment.directive === &quot;property&quot;) {</span></pre>
+<pre><span class="lineno"><a href="#line_887" id="line_887">  887.</a></span><span class="count                ">    562</span><span>                if (tenure === undefined) {</span></pre>
+<pre><span class="lineno"><a href="#line_888" id="line_888">  888.</a></span><span class="count                ">    562</span><span>                    tenure = empty();</span></pre>
+<pre><span class="lineno"><a href="#line_889" id="line_889">  889.</a></span><span class="count                ">    562</span><span>                }</span></pre>
+<pre><span class="lineno"><a href="#line_890" id="line_890">  890.</a></span><span class="count                ">    562</span><span>                tenure[name] = true;</span></pre>
+<pre><span class="lineno"><a href="#line_891" id="line_891">  891.</a></span><span class="count                ">    562</span><span>            } else if (the_comment.directive === &quot;global&quot;) {</span></pre>
+<pre><span class="lineno"><a href="#line_892" id="line_892">  892.</a></span><span class="count                ">    562</span><span>                if (value) {</span></pre>
+<pre><span class="lineno"><a href="#line_893" id="line_893">  893.</a></span><span class="count                ">    562</span><span>                    warn(&quot;bad_option_a&quot;, the_comment, name + &quot;:&quot; + value);</span></pre>
+<pre><span class="lineno"><a href="#line_894" id="line_894">  894.</a></span><span class="count                ">    562</span><span>                }</span></pre>
+<pre><span class="lineno"><a href="#line_895" id="line_895">  895.</a></span><span class="count                ">    562</span><span>                declared_globals[name] = false;</span></pre>
+<pre><span class="lineno"><a href="#line_896" id="line_896">  896.</a></span><span class="count                ">    562</span><span>                module_mode = the_comment;</span></pre>
+<pre><span class="lineno"><a href="#line_897" id="line_897">  897.</a></span><span class="count                ">    562</span><span>            }</span></pre>
+<pre><span class="lineno"><a href="#line_898" id="line_898">  898.</a></span><span class="count                ">    562</span><span>            return parse_directive(the_comment, result[3]);</span></pre>
+<pre><span class="lineno"><a href="#line_899" id="line_899">  899.</a></span><span class="count                ">    562</span><span>        }</span></pre>
 <pre><span class="lineno"><a href="#line_900" id="line_900">  900.</a></span><span class="count                ">     30</span><span>        if (body) {</span></pre>
 <pre><span class="lineno"><a href="#line_901" id="line_901">  901.</a></span><span class="count                ">      1</span><span>            return stop(&quot;bad_directive_a&quot;, the_comment, body);</span></pre>
 <pre><span class="lineno"><a href="#line_902" id="line_902">  902.</a></span><span class="count                ">      1</span><span>        }</span></pre>
-<pre><span class="lineno"><a href="#line_903" id="line_903">  903.</a></span><span class="count                ">    594</span><span>    }</span></pre>
+<pre><span class="lineno"><a href="#line_903" id="line_903">  903.</a></span><span class="count                ">    592</span><span>    }</span></pre>
 <pre><span class="lineno"><a href="#line_904" id="line_904">  904.</a></span><span class="count                ">    280</span><span></span></pre>
 <pre><span class="lineno"><a href="#line_905" id="line_905">  905.</a></span><span class="count                ">   1134</span><span>    function comment(snippet) {</span></pre>
 <pre><span class="lineno"><a href="#line_906" id="line_906">  906.</a></span><span class="count                ">   1134</span><span></span></pre>
@@ -1320,28 +1320,28 @@ body {
 <pre><span class="lineno"><a href="#line_1191" id="line_1191"> 1191.</a></span><span class="count                ">   3911</span><span>        snippet = &quot;&quot;;</span></pre>
 <pre><span class="lineno"><a href="#line_1192" id="line_1192"> 1192.</a></span><span class="count                ">   3911</span><span>        next_char();</span></pre>
 <pre><span class="lineno"><a href="#line_1193" id="line_1193"> 1193.</a></span><span class="count                ">   3911</span><span></span></pre>
-<pre><span class="lineno"><a href="#line_1194" id="line_1194"> 1194.</a></span><span class="count                ">  34833</span><span>        return (function next() {</span></pre>
+<pre><span class="lineno"><a href="#line_1194" id="line_1194"> 1194.</a></span><span class="count                ">  34823</span><span>        return (function next() {</span></pre>
 <pre><span class="lineno"><a href="#line_1195" id="line_1195"> 1195.</a></span><span class="count                ">   3908</span><span>            if (char === quote) {</span></pre>
 <pre><span class="lineno"><a href="#line_1196" id="line_1196"> 1196.</a></span><span class="count                ">   3908</span><span>                snip();</span></pre>
 <pre><span class="lineno"><a href="#line_1197" id="line_1197"> 1197.</a></span><span class="count                ">   3908</span><span>                the_token = make(&quot;(string)&quot;, snippet);</span></pre>
 <pre><span class="lineno"><a href="#line_1198" id="line_1198"> 1198.</a></span><span class="count                ">   3908</span><span>                the_token.quote = quote;</span></pre>
 <pre><span class="lineno"><a href="#line_1199" id="line_1199"> 1199.</a></span><span class="count                ">   3908</span><span>                return the_token;</span></pre>
-<pre><span class="lineno"><a href="#line_1200" id="line_1200"> 1200.</a></span><span class="count                ">  30925</span><span>            }</span></pre>
-<pre><span class="lineno"><a href="#line_1201" id="line_1201"> 1201.</a></span><span class="count                ">  30925</span><span>            if (char === &quot;&quot;) {</span></pre>
+<pre><span class="lineno"><a href="#line_1200" id="line_1200"> 1200.</a></span><span class="count                ">  30915</span><span>            }</span></pre>
+<pre><span class="lineno"><a href="#line_1201" id="line_1201"> 1201.</a></span><span class="count                ">  30915</span><span>            if (char === &quot;&quot;) {</span></pre>
 <pre><span class="lineno"><a href="#line_1202" id="line_1202"> 1202.</a></span><span class="count                ">      1</span><span>                return stop_at(&quot;unclosed_string&quot;, line, column);</span></pre>
-<pre><span class="lineno"><a href="#line_1203" id="line_1203"> 1203.</a></span><span class="count                ">  30924</span><span>            }</span></pre>
-<pre><span class="lineno"><a href="#line_1204" id="line_1204"> 1204.</a></span><span class="count                ">  30924</span><span>            if (char === &quot;\\&quot;) {</span></pre>
+<pre><span class="lineno"><a href="#line_1203" id="line_1203"> 1203.</a></span><span class="count                ">  30914</span><span>            }</span></pre>
+<pre><span class="lineno"><a href="#line_1204" id="line_1204"> 1204.</a></span><span class="count                ">  30914</span><span>            if (char === &quot;\\&quot;) {</span></pre>
 <pre><span class="lineno"><a href="#line_1205" id="line_1205"> 1205.</a></span><span class="count                ">    287</span><span>                escape(quote);</span></pre>
-<pre><span class="lineno"><a href="#line_1206" id="line_1206"> 1206.</a></span><span class="count                ">  30637</span><span>            } else if (char === &quot;`&quot;) {</span></pre>
-<pre><span class="lineno"><a href="#line_1207" id="line_1207"> 1207.</a></span><span class="count                ">  30637</span><span>                if (mega_mode) {</span></pre>
-<pre><span class="lineno"><a href="#line_1208" id="line_1208"> 1208.</a></span><span class="count                ">  30637</span><span>                    warn_at(&quot;unexpected_a&quot;, line, column, &quot;`&quot;);</span></pre>
-<pre><span class="lineno"><a href="#line_1209" id="line_1209"> 1209.</a></span><span class="count                ">  30637</span><span>                }</span></pre>
-<pre><span class="lineno"><a href="#line_1210" id="line_1210"> 1210.</a></span><span class="count                ">  30637</span><span>                next_char(&quot;`&quot;);</span></pre>
-<pre><span class="lineno"><a href="#line_1211" id="line_1211"> 1211.</a></span><span class="count                ">  30637</span><span>            } else {</span></pre>
-<pre><span class="lineno"><a href="#line_1212" id="line_1212"> 1212.</a></span><span class="count                ">  30637</span><span>                next_char();</span></pre>
-<pre><span class="lineno"><a href="#line_1213" id="line_1213"> 1213.</a></span><span class="count                ">  30922</span><span>            }</span></pre>
-<pre><span class="lineno"><a href="#line_1214" id="line_1214"> 1214.</a></span><span class="count                ">  30922</span><span>            return next();</span></pre>
-<pre><span class="lineno"><a href="#line_1215" id="line_1215"> 1215.</a></span><span class="count                ">  30922</span><span>        }());</span></pre>
+<pre><span class="lineno"><a href="#line_1206" id="line_1206"> 1206.</a></span><span class="count                ">  30627</span><span>            } else if (char === &quot;`&quot;) {</span></pre>
+<pre><span class="lineno"><a href="#line_1207" id="line_1207"> 1207.</a></span><span class="count                ">  30627</span><span>                if (mega_mode) {</span></pre>
+<pre><span class="lineno"><a href="#line_1208" id="line_1208"> 1208.</a></span><span class="count                ">  30627</span><span>                    warn_at(&quot;unexpected_a&quot;, line, column, &quot;`&quot;);</span></pre>
+<pre><span class="lineno"><a href="#line_1209" id="line_1209"> 1209.</a></span><span class="count                ">  30627</span><span>                }</span></pre>
+<pre><span class="lineno"><a href="#line_1210" id="line_1210"> 1210.</a></span><span class="count                ">  30627</span><span>                next_char(&quot;`&quot;);</span></pre>
+<pre><span class="lineno"><a href="#line_1211" id="line_1211"> 1211.</a></span><span class="count                ">  30627</span><span>            } else {</span></pre>
+<pre><span class="lineno"><a href="#line_1212" id="line_1212"> 1212.</a></span><span class="count                ">  30627</span><span>                next_char();</span></pre>
+<pre><span class="lineno"><a href="#line_1213" id="line_1213"> 1213.</a></span><span class="count                ">  30912</span><span>            }</span></pre>
+<pre><span class="lineno"><a href="#line_1214" id="line_1214"> 1214.</a></span><span class="count                ">  30912</span><span>            return next();</span></pre>
+<pre><span class="lineno"><a href="#line_1215" id="line_1215"> 1215.</a></span><span class="count                ">  30912</span><span>        }());</span></pre>
 <pre><span class="lineno"><a href="#line_1216" id="line_1216"> 1216.</a></span><span class="count                ">   3911</span><span>    }</span></pre>
 <pre><span class="lineno"><a href="#line_1217" id="line_1217"> 1217.</a></span><span class="count                ">    280</span><span></span></pre>
 <pre><span class="lineno"><a href="#line_1218" id="line_1218"> 1218.</a></span><span class="count                ">    466</span><span>    function frack() {</span></pre>
@@ -5319,7 +5319,7 @@ body {
 <pre><span class="lineno"><a href="#line_5190" id="line_5190"> 5190.</a></span><span class="count                ">    585</span><span>    });</span></pre>
 <pre><span class="lineno"><a href="#line_5191" id="line_5191"> 5191.</a></span><span class="count                ">    280</span><span>    return {</span></pre>
 <pre><span class="lineno"><a href="#line_5192" id="line_5192"> 5192.</a></span><span class="count                ">    280</span><span>        directives,</span></pre>
-<pre><span class="lineno"><a href="#line_5193" id="line_5193"> 5193.</a></span><span class="count                ">    280</span><span>        edition: &quot;v2021.5.24-beta&quot;,</span></pre>
+<pre><span class="lineno"><a href="#line_5193" id="line_5193"> 5193.</a></span><span class="count                ">    280</span><span>        edition: &quot;v2021.5.26&quot;,</span></pre>
 <pre><span class="lineno"><a href="#line_5194" id="line_5194"> 5194.</a></span><span class="count                ">    280</span><span>        exports,</span></pre>
 <pre><span class="lineno"><a href="#line_5195" id="line_5195"> 5195.</a></span><span class="count                ">    280</span><span>        froms,</span></pre>
 <pre><span class="lineno"><a href="#line_5196" id="line_5196"> 5196.</a></span><span class="count                ">    280</span><span>        functions,</span></pre>
