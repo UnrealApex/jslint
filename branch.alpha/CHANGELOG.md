@@ -1,8 +1,11 @@
 # Changelog
 
 ## Todo
-- jslint - cleanup regexp code using switch-statements.
+- jslint - inline-document each warning with source_code that can reproduce it.
+- node - after node-v14 is deprecated, remove shell-code export "NODE_OPTIONS=--unhandled-rejections=strict".
 - node - after node-v12 is deprecated, change require("fs").promises to require("fs/promises").
+- jslint - add html and css linting back into jslint.
+- jslint - cleanup regexp code using switch-statements.
 - app - deploy jslint as chrome-extension.
 - doc - add svg changelog.
 - doc - add svg package-listing.
