@@ -2128,9 +2128,6 @@ function are_similar(a, b) {
                 && are_similar(a.expression[2], b.expression[2])
             );
         }
-        if (a.arity === "function" && a.arity === "regexp") {
-            return false;
-        }
 
 // cause: "undefined&&undefined"
 

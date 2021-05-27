@@ -12,6 +12,7 @@
 - none
 
 ## v2021.5.27-beta
+- jslint - remove deadcode in function are_similar superseded by previouse is_weird() check.
 - ci - fix expectedWarningCode not being validated
 - ci - in windows, disable git-autocrlf
 - jslint - inline-document each warning with cause that can reproduce it - part 1.
