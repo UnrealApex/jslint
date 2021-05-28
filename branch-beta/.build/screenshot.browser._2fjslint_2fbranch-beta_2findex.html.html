@@ -1,88 +1,446 @@
 <!DOCTYPE html>
-<html><head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; connect-src 'self'">
-    <title>Page not found · GitHub Pages</title>
-    <style type="text/css" media="screen">
-      body {
-        background-color: #f1f1f1;
-        margin: 0;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      }
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="description" content="JSLint, The JavaScript Code Quality Tool. This file allows JSLint
+    to be run from a web browser. It can accept a source program and analyze
+    it without sending it over the network.">
+<meta name="author" content="Douglas Crockford">
+<meta name="date" content="2020-10-23">
+<link rel="icon" type="image/png" href="image-jslint-64x64.png">
+<title>JSLint:&nbsp;The&nbsp;JavaScript&nbsp;Code Quality Tool</title>
+<style>
+@font-face {
+    font-family: "Programma";
+    font-weight: bold;
+    src: url("font-programma-bold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Daley";
+    font-weight: bold;
+    src: url("font-daley-bold.woff2") format("woff2");
+}
 
-      .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
+body {
+    background-color: antiquewhite;
+    color: black;
+    font-family: "Daley", sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-      a { color: #4183c4; text-decoration: none; }
-      a:hover { text-decoration: underline; }
+#JSLINT_TITLEBOX {
+    font-family: "Daley", sans-serif;
+    margin: 10px 40px 0 40px;
+    padding: 0;
+}
 
-      h1 { width: 800px; position:relative; left: -100px; letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px 0 50px 0; text-shadow: 0 1px 0 #fff; }
-      p { color: rgba(0, 0, 0, 0.5); margin: 20px 0; line-height: 1.6; }
+#JSLINT_TITLEBOX ul {
+    float: right;
+    font-size: 12pt;
+}
 
-      ul { list-style: none; margin: 25px 0; padding: 0; }
-      li { display: table-cell; font-weight: bold; width: 1%; }
+#JSLINT_TITLEBOX div {
+    color: darkslategray;
+    float: left;
+    font-size: 48pt;
+}
 
-      .logo { display: inline-block; margin-top: 35px; }
-      .logo-img-2x { display: none; }
-      @media
-      only screen and (-webkit-min-device-pixel-ratio: 2),
-      only screen and (   min--moz-device-pixel-ratio: 2),
-      only screen and (     -o-min-device-pixel-ratio: 2/1),
-      only screen and (        min-device-pixel-ratio: 2),
-      only screen and (                min-resolution: 192dpi),
-      only screen and (                min-resolution: 2dppx) {
-        .logo-img-1x { display: none; }
-        .logo-img-2x { display: inline-block; }
-      }
+#JSLINT_ fieldset {
+    background-color: gainsboro;
+    border: 0;
+    clear: both;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 1em;
+    padding: 0;
+    width: auto;
+}
+#JSLINT_  legend {
+    background-color: darkslategray;
+    border: 0;
+    color: white;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding-bottom: 0.25em;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0.25em;
+    text-align: center;
+    width: 100%;
+}
+#JSLINT_ button {
+    background-color: darkslategray;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    font-family: "Daley", sans-serif;
+    font-size: 100%;
+    font-style: normal;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+    text-align: center;
+}
+#JSLINT_ button:hover {
+    background-color: slategray;
+    color: white;
+    border: 0;
+}
 
-      #suggestions {
-        margin-top: 35px;
-        color: #ccc;
-      }
-      #suggestions a {
-        color: #666666;
-        font-weight: 200;
-        font-size: 14px;
-        margin: 0 10px;
-      }
+#JSLINT_ button:active {
+    border: 0;
+    color: black;
+}
 
-    </style>
-  </head>
-  <body>
+#JSLINT_ button:disabled {
+    background-color: gray;
+    border: 0;
+    color: gainsboro;
+}
 
-    <div class="container">
+a:visited {
+    color: #69565c;
+}
 
-      <h1>404</h1>
-      <p><strong>File not found</strong></p>
+a:link {
+    color: black;
+}
 
-      <p>
-        The site configured at this address does not
-        contain the requested file.
-      </p>
+#JSLINT_ input[type="text"] {
+    background-color: white;
+    border: 0;
+    color: black;
+    margin-bottom: 0.2em;
+    margin-right: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: right;
+    width: 3em;
+}
 
-      <p>
-        If this is your site, make sure that the filename case matches the URL.<br>
-        For root URLs (like <code>http://example.com/</code>) you must provide an
-        <code>index.html</code> file.
-      </p>
+#JSLINT_ textarea {
+    border: 0;
+    background-color: white;
+    border: 0;
+    font-family: Programma, monospace;
+    font-size: 100%;
+    font-weight: bold;
+    resize: none;
+}
 
-      <p>
-        <a href="https://help.github.com/pages/">Read the full documentation</a>
-        for more information about using <strong>GitHub Pages</strong>.
-      </p>
+#JSLINT_ textarea::selection {
+    background-color: yellow;
+    color: black;
+}
 
-      <div id="suggestions">
-        <a href="https://githubstatus.com">GitHub Status</a> —
-        <a href="https://twitter.com/githubstatus">@githubstatus</a>
-      </div>
+#JSLINT_NUMBER {
+    color: darkgray;
+    display: inline-block;
+    height: 4in;
+    margin: 2%;
+    margin-right: 0;
+    overflow: hidden;
+    padding-right: 0.5%;
+    text-align: right;
+    white-space: pre;
+    width: 4%;
+}
 
-      <a href="/" class="logo logo-img-1x">
-        <img width="32" height="32" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFMTZCRDY3REIzRjAxMUUyQUQzREIxQzRENUFFNUM5NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFMTZCRDY3RUIzRjAxMUUyQUQzREIxQzRENUFFNUM5NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkUxNkJENjdCQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkUxNkJENjdDQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+SM9MCAAAA+5JREFUeNrEV11Ik1EY3s4+ddOp29Q5b0opCgKFsoKoi5Kg6CIhuwi6zLJLoYLopq4qsKKgi4i6CYIoU/q5iDAKs6syoS76IRWtyJ+p7cdt7sf1PGOD+e0c3dygAx/67ZzzPM95/877GYdHRg3ZjMXFxepQKNS6sLCwJxqNNuFpiMfjVs4ZjUa/pmmjeD6VlJS8NpvNT4QQ7mxwjSsJiEQim/1+/9lgMHgIr5ohuxG1WCw9Vqv1clFR0dCqBODElV6v90ogEDjGdYbVjXhpaendioqK07CIR7ZAqE49PT09BPL2PMgTByQGsYiZlQD4uMXtdr+JxWINhgINYhGT2MsKgMrm2dnZXgRXhaHAg5jEJodUAHxux4LudHJE9RdEdA+i3Juz7bGHe4mhE9FNrgwBCLirMFV9Okh5eflFh8PR5nK5nDabrR2BNJlKO0T35+Li4n4+/J+/JQCxhmu5h3uJoXNHPbmWZAHMshWB8l5/ipqammaAf0zPDDx1ONV3vurdidqwAQL+pEc8sLcAe1CCvQ3YHxIW8Pl85xSWNC1hADDIv0rIE/o4J0k3kww4xSlwIhcq3EFFOm7KN/hUGOQkt0CFa5WpNJlMvxBEz/IVQAxg/ZRZl9wiHA63yDYieM7DnLP5CiAGsC7I5sgtYKJGWe2A8seFqgFJrJjEPY1Cn3pJ8/9W1e5VWsFDTEmFrBcoDhZJEQkXuhICMyKpjhahqN21hRYATKfUOlDmkygrR4o4C0VOLGJKrOITKB4jijzdXygBKixyC5TDQdnk/Pz8qRw6oOWGlsTKGOQW6OH6FBWsyePxdOXLTgxiyebILZCjz+GLgMIKnXNzc49YMlcRdHXcSwxFVgTInQhC9G33UhNoJLuqq6t345p9y3eUy8OTk5PjAHuI9uo4b07FBaOhsu0A4Unc+T1TU1Nj3KsSSE5yJ65jqF2DDd8QqWYmAZrIM2VlZTdnZmb6AbpdV9V6ec9znf5Q7HjYumdRE0JOp3MjitO4SFa+cZz8Umqe3TCbSLvdfkR/kWDdNQl5InuTcysOcpFT35ZrbBxx4p3JAHlZVVW1D/634VRt+FvLBgK/v5LV9WS+10xMTEwtRw7XvqOL+e2Q8V3AYIOIAXQ26/heWVnZCVfcyKHg2CBgTpmPmjYM8l24GyaUHyaIh7XwfR9ErE8qHoDfn2LTNAVC0HX6MFcBIP8Bi+6F6cdW/DICkANRfx99fEYFQ7Nph5i/uQiA214gno7K+guhaiKg9gC62+M8eR7XsBsYJ4ilam60Fb7r7uAj8wFyuwM1oIOWgfmDy6RXEEQzJMPe23DXrVS7rtyD3Df8z/FPgAEAzWU5Ku59ZAUAAAAASUVORK5CYII=">
-      </a>
+#JSLINT_SOURCE {
+    color: black;
+    display: inline-block;
+    font-size: 100%;
+    height: 4in;
+    margin: 2%;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: auto;
+    padding-left: 0.5%;
+    white-space: pre;
+    width: 91%;
+}
 
-      <a href="/" class="logo logo-img-2x">
-        <img width="32" height="32" title="" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpEQUM1QkUxRUI0MUMxMUUyQUQzREIxQzRENUFFNUM5NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpEQUM1QkUxRkI0MUMxMUUyQUQzREIxQzRENUFFNUM5NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkUxNkJENjdGQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkUxNkJENjgwQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+hfPRaQAAB6lJREFUeNrsW2mM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">
-      </a>
+#JSLINT_PROPERTY {
+    background-color: honeydew;
+    border: 0;
+    margin: 2%;
+    padding: 0.5%;
+    white-space: pre;
+    width: 95%;
+}
+
+#JSLINT_GLOBAL {
+    white-space: normal;
+    width: 95%;
+}
+#JSLINT_ label {
+    font-family: sans-serif;
+    font-size: 90%;
+    padding-left: 0.25em;
+}
+#JSLINT_OPTIONS>div {
+    float: left;
+    margin: 0.5em;
+}
+
+#JSLINT_ address {
+    color: black;
+    display: block;
+    float: right;
+    font-family: serif;
+    font-size: 90%;
+    margin-left: 1em;
+}
+#JSLINT_ dl {
+    background-color: cornsilk;
+    color: white;
+    margin: 0;
+    padding-bottom: 2pt;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 2pt;
+}
+#JSLINT_ dfn {
+    color: black;
+    display: block;
+    font-family: Programma, monospace;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 2pt;
+}
+#JSLINT_ dt {
+    color: black;
+    display: block;
+    float: left;
+    font-family: serif;
+    font-size: 75%;
+    font-style: italic;
+    margin: 0;
+    width: 8em;
+    text-align: right;
+}
+#JSLINT_ dd {
+    color: black;
+    display: block;
+    font-family: Programma, monospace;
+    font-weight: bold;
+    margin-left: 8em;
+    padding-bottom: 2pt;
+}
+#JSLINT_WARNINGS>legend {
+    background-color: indianred;
+}
+#JSLINT_WARNINGS>div {
+    background-color: pink;
+    padding: 1em;
+}
+#JSLINT_WARNINGS cite {
+    color: black;
+    display: block;
+    font-family: serif;
+    font-size: 100%;
+    font-style: normal;
+    margin-bottom: 4pt;
+    margin-left: 20pt;
+    margin-right: 20pt;
+    margin-top: 4pt;
+    overflow-x: hidden;
+}
+#JSLINT_WARNINGS samp {
+    background-color: lavenderblush;
+    color: black;
+    display: block;
+    font-family: Programma, monospace;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: bold;
+    padding: 4pt;
+    margin-bottom: 0;
+    margin-left: 16pt;
+    margin-right: 16pt;
+    margin-top: 0;
+    white-space: pre-wrap;
+}
+
+#JSLINT_REPORT center {
+    margin-top: 1em;
+}
+
+#JSLINT_WARNINGS dl address {
+    color: black;
+    display: inline;
+    float: none;
+    font-size: 80%;
+    margin: 0;
+}
+
+#JSLINT_REPORT>div {
+    padding: 1em;
+}
+
+#JSLINT_ dl.level0 {
+    color: black;
+    background-color: white;
+}
+
+#JSLINT_ dl.level1 {
+    color: black;
+    background-color: #ffffe0;  /* yellow */
+    margin-left: 1em;
+}
+
+#JSLINT_ dl.level2 {
+    color: black;
+    background-color: #e0ffe0;  /* green */
+    margin-left: 2em;
+}
+
+#JSLINT_ dl.level3 {
+    color: black;
+    background-color: #D0D0ff;  /* blue */
+    margin-left: 3em;
+}
+
+#JSLINT_ dl.level4 {
+    background-color: #ffe0ff;  /* purple */
+    color: black;
+    margin-left: 4em;
+}
+
+#JSLINT_ dl.level5 {
+    background-color: #ffe0e0;  /* red */
+    color: black;
+    margin-left: 5em;
+}
+
+#JSLINT_ dl.level6 {
+    background-color: #ffe390;  /* orange */
+    color: black;
+    margin-left: 6em;
+}
+
+#JSLINT_ dl.level7 {
+    background-color: #e0e0e0;  /* gray */
+    color: black;
+    margin-left: 7em;
+}
+
+#JSLINT_ dl.level8 {
+    color: black;
+    margin-left: 8em;
+}
+
+#JSLINT_ dl.level9 {
+    color: black;
+    margin-left: 9em;
+}
+
+.none {
+    display: none;
+}
+.center {
+    text-align: center;
+}
+</style>
+</head>
+<body>
+<div id="bannerFork1" style="
+    height: 100px;
+    left: 0;
+    margin: 0;
+    opacity: 0.75;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 200px;
+    z-index: 99;
+">
+    <div style="
+    background: darkslategray;
+    font-size: 13px;
+    height: 20px;
+    line-height: 20px;
+    opacity: 0.75;
+    overflow: visible;
+    position: absolute;
+    right: 60px;
+    text-align: center;
+    top: 30px;
+    transform: rotate(-45deg);
+    width: 100%;
+">
+    <a href="https://github.com/jslint-org/jslint" style="color: #fff;" target="_blank">
+    fork on github
+    </a>
     </div>
-  
+</div>
+<div id="JSLINT_TITLEBOX">
+    <div>JSLint</div>
+    <ul>
+        <li><a href="help.html">Read the instructions.</a></li>
+        <li><a href="https://www.amazon.com/dp/1949815005/wrrrldwideweb" target="_blank">
+<i>How JavaScript Works</i> by Douglas Crockford.
+  </a></li>
+    </ul>
+</div>
+<div id="JSLINT_">
+  <fieldset><legend>Source</legend><textarea id="JSLINT_NUMBER" rows="18" readonly=""></textarea><textarea id="JSLINT_SOURCE" rows="18" autofocus="" spellcheck="false" placeholder="// Paste JavaScript source or JSON text here."></textarea></fieldset>
+  <div class="center">
+      <button name="JSLint">JSLint</button>
+      <button name="clear">clear</button>
+  </div>
+  <fieldset id="JSLINT_WARNINGS" class="none" style="display: none;">
+    <legend>Warnings</legend>
+    <div id="JSLINT_WARNINGS_LIST"></div>
+  </fieldset>
+  <fieldset id="JSLINT_REPORT" class="none" style="display: block;">
+    <legend>Function Report</legend>
+    <div id="JSLINT_REPORT_LIST"><dl class="level0"><dt>module</dt><dd>Promise, console, https, jslint</dd><dt>import from</dt><dd>./jslint.js, https</dd></dl><dl class="level1"><address>4</address><dfn><b>«async»</b>()</dfn><dt>variable</dt><dd>result</dd><dt>closure</dt><dd>result</dd><dt>module</dt><dd>Promise, jslint</dd></dl><dl class="level2"><address>6</address><dfn><b>«Promise»</b>(resolve)</dfn><dt>parameter</dt><dd>resolve</dd><dt>closure</dt><dd>resolve</dd><dt>module</dt><dd>https</dd></dl><dl class="level3"><address>7</address><dfn><b>«request»</b>(res)</dfn><dt>parameter</dt><dd>res</dd><dt>outer</dt><dd>result</dd></dl><dl class="level4"><address>9</address><dfn><b>«data»</b>(chunk)</dfn><dt>parameter</dt><dd>chunk</dd><dt>outer</dt><dd>result</dd></dl><dl class="level4"><address>11</address><dfn><b>«end»</b>()</dfn><dt>outer</dt><dd>resolve, result</dd></dl><dl class="level2"><address>17</address><dfn><b>«forEach»</b>({formatted_message})</dfn><dt>parameter</dt><dd>formatted_message</dd><dt>module</dt><dd>console</dd></dl><center>JSLint edition v2021.5.27</center></div>
+  </fieldset>
+  <fieldset id="JSLINT_PROPERTYFIELDSET" class="none" style="display: block;">
+    <legend>Property Directive</legend>
+    <textarea id="JSLINT_PROPERTY" rows="8" readonly=""></textarea>
+  </fieldset>
+  <div id="JSLINT_AUX" class="none center" style="display: block;">
+      <button name="select" id="JSLINT_SELECT">select property</button>
+      <button name="JSLint">JSLint</button>
+      <button name="clear">clear</button>
+      <button name="options" id="JSLINT_CLEAR_OPTIONS">clear options</button>
+  </div>
+  <fieldset id="JSLINT_OPTIONS"><legend>Options</legend>
+    <div>Assume...
+      <div><label><input title="devel" type="checkbox">in development</label></div>
+      <div><label><input title="browser" type="checkbox">a browser</label></div>
+      <div><label><input title="couch" type="checkbox">CouchDB</label></div>
+      <div><label><input title="node" type="checkbox">Node.js</label></div>
+    <br>Fudge...
+      <div><label><input id="JSLINT_FUDGE" title="fudge" type="checkbox">First line number is 1</label></div>
+    </div>
+    <div>Tolerate...
+      <div><label><input title="bitwise" type="checkbox">bitwise operators</label></div>
+      <div><label><input title="convert" type="checkbox">conversion operators</label></div>
+      <div><label><input title="eval" type="checkbox">eval</label></div>
+      <div><label><input title="for" type="checkbox">for statement</label></div>
+      <div><label><input title="getset" type="checkbox">get and set</label></div>
+      <div><label><input title="long" type="checkbox">long lines</label></div>
+      <div><label><input title="single" type="checkbox">single quote strings</label></div>
+      <div><label><input title="this" type="checkbox">this</label></div>
+      <div><label><input title="unordered" type="checkbox">unordered properties and params</label></div>
+      <div><label><input title="white" type="checkbox">whitespace mess</label></div>
+    </div>
+    <div>Global variables...
+      <textarea id="JSLINT_GLOBAL" title="global" spellcheck="false" placeholder="imported globals here"></textarea>
+    </div>
+  </fieldset>
+</div>
+<script src="browser.js" type="module"></script>
 
 </body></html>

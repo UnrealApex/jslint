@@ -172,7 +172,7 @@ process.exit(
     if [ "$(git rev-list --count gh-pages)" -gt 100 ]
     then
         # backup
-        shGitCmdWithGithubToken push origin -f gh-pages:gh-pages.backup
+        shGitCmdWithGithubToken push origin -f gh-pages:gh-pages-backup
         # squash commits
         git checkout --orphan squash1
         git commit --quiet -am squash || true
