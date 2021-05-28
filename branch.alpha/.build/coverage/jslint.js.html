@@ -258,7 +258,7 @@ body {
 <pre><span class="lineno"><a href="#line_129" id="line_129">  129.</a></span><span class="count                ">      1</span><span>    wrapped, writable, y</span></pre>
 <pre><span class="lineno"><a href="#line_130" id="line_130">  130.</a></span><span class="count                ">      1</span><span>*/</span></pre>
 <pre><span class="lineno"><a href="#line_131" id="line_131">  131.</a></span><span class="count                ">      1</span><span></span></pre>
-<pre><span class="lineno"><a href="#line_132" id="line_132">  132.</a></span><span class="count                ">      1</span><span>const edition = &quot;v2021.5.27-beta&quot;;</span></pre>
+<pre><span class="lineno"><a href="#line_132" id="line_132">  132.</a></span><span class="count                ">      1</span><span>const edition = &quot;v2021.5.27&quot;;</span></pre>
 <pre><span class="lineno"><a href="#line_133" id="line_133">  133.</a></span><span class="count                ">      1</span><span></span></pre>
 <pre><span class="lineno"><a href="#line_134" id="line_134">  134.</a></span><span class="count                ">   7925</span><span>function assert_or_throw(passed, message) {</span></pre>
 <pre><span class="lineno"><a href="#line_135" id="line_135">  135.</a></span><span class="count                ">   7925</span><span></span></pre>
@@ -850,12 +850,12 @@ body {
 <pre><span class="lineno"><a href="#line_721" id="line_721">  721.</a></span><span class="count                ">   5114</span><span>        snippet = snippet.slice(0, -1);</span></pre>
 <pre><span class="lineno"><a href="#line_722" id="line_722">  722.</a></span><span class="count                ">   5114</span><span>    }</span></pre>
 <pre><span class="lineno"><a href="#line_723" id="line_723">  723.</a></span><span class="count                ">    368</span><span></span></pre>
-<pre><span class="lineno"><a href="#line_724" id="line_724">  724.</a></span><span class="count                ">  36346</span><span>    function next_char(match) {</span></pre>
-<pre><span class="lineno"><a href="#line_725" id="line_725">  725.</a></span><span class="count                ">  36346</span><span></span></pre>
-<pre><span class="lineno"><a href="#line_726" id="line_726">  726.</a></span><span class="count                ">  36346</span><span>// Get the next character from the source line. Remove it from the source_line,</span></pre>
-<pre><span class="lineno"><a href="#line_727" id="line_727">  727.</a></span><span class="count                ">  36346</span><span>// and append it to the snippet. Optionally check that the previous character</span></pre>
-<pre><span class="lineno"><a href="#line_728" id="line_728">  728.</a></span><span class="count                ">  36346</span><span>// matched an expected value.</span></pre>
-<pre><span class="lineno"><a href="#line_729" id="line_729">  729.</a></span><span class="count                ">  36346</span><span></span></pre>
+<pre><span class="lineno"><a href="#line_724" id="line_724">  724.</a></span><span class="count                ">  36336</span><span>    function next_char(match) {</span></pre>
+<pre><span class="lineno"><a href="#line_725" id="line_725">  725.</a></span><span class="count                ">  36336</span><span></span></pre>
+<pre><span class="lineno"><a href="#line_726" id="line_726">  726.</a></span><span class="count                ">  36336</span><span>// Get the next character from the source line. Remove it from the source_line,</span></pre>
+<pre><span class="lineno"><a href="#line_727" id="line_727">  727.</a></span><span class="count                ">  36336</span><span>// and append it to the snippet. Optionally check that the previous character</span></pre>
+<pre><span class="lineno"><a href="#line_728" id="line_728">  728.</a></span><span class="count                ">  36336</span><span>// matched an expected value.</span></pre>
+<pre><span class="lineno"><a href="#line_729" id="line_729">  729.</a></span><span class="count                ">  36336</span><span></span></pre>
 <pre><span class="lineno"><a href="#line_730" id="line_730">  730.</a></span><span class="count                ">    782</span><span>        if (match !== undefined &amp;&amp; char !== match) {</span></pre>
 <pre><span class="lineno"><a href="#line_731" id="line_731">  731.</a></span><span class="count                ">      3</span><span>            return stop_at(</span></pre>
 <pre><span class="lineno"><a href="#line_732" id="line_732">  732.</a></span><span class="count                ">      3</span><span>                (</span></pre>
@@ -868,18 +868,18 @@ body {
 <pre><span class="lineno"><a href="#line_739" id="line_739">  739.</a></span><span class="count                ">      3</span><span>                match,</span></pre>
 <pre><span class="lineno"><a href="#line_740" id="line_740">  740.</a></span><span class="count                ">      3</span><span>                char</span></pre>
 <pre><span class="lineno"><a href="#line_741" id="line_741">  741.</a></span><span class="count                ">      3</span><span>            );</span></pre>
-<pre><span class="lineno"><a href="#line_742" id="line_742">  742.</a></span><span class="count                ">  36343</span><span>        }</span></pre>
-<pre><span class="lineno"><a href="#line_743" id="line_743">  743.</a></span><span class="count                ">  36343</span><span>        if (source_line) {</span></pre>
-<pre><span class="lineno"><a href="#line_744" id="line_744">  744.</a></span><span class="count                ">  36186</span><span>            char = source_line[0];</span></pre>
-<pre><span class="lineno"><a href="#line_745" id="line_745">  745.</a></span><span class="count                ">  36186</span><span>            source_line = source_line.slice(1);</span></pre>
-<pre><span class="lineno"><a href="#line_746" id="line_746">  746.</a></span><span class="count                ">  36186</span><span>            snippet += char;</span></pre>
-<pre><span class="lineno"><a href="#line_747" id="line_747">  747.</a></span><span class="count                ">  36186</span><span>        } else {</span></pre>
+<pre><span class="lineno"><a href="#line_742" id="line_742">  742.</a></span><span class="count                ">  36333</span><span>        }</span></pre>
+<pre><span class="lineno"><a href="#line_743" id="line_743">  743.</a></span><span class="count                ">  36333</span><span>        if (source_line) {</span></pre>
+<pre><span class="lineno"><a href="#line_744" id="line_744">  744.</a></span><span class="count                ">  36176</span><span>            char = source_line[0];</span></pre>
+<pre><span class="lineno"><a href="#line_745" id="line_745">  745.</a></span><span class="count                ">  36176</span><span>            source_line = source_line.slice(1);</span></pre>
+<pre><span class="lineno"><a href="#line_746" id="line_746">  746.</a></span><span class="count                ">  36176</span><span>            snippet += char;</span></pre>
+<pre><span class="lineno"><a href="#line_747" id="line_747">  747.</a></span><span class="count                ">  36176</span><span>        } else {</span></pre>
 <pre><span class="lineno"><a href="#line_748" id="line_748">  748.</a></span><span class="count                ">    157</span><span>            char = &quot;&quot;;</span></pre>
 <pre><span class="lineno"><a href="#line_749" id="line_749">  749.</a></span><span class="count                ">    157</span><span>            snippet += &quot; &quot;;</span></pre>
-<pre><span class="lineno"><a href="#line_750" id="line_750">  750.</a></span><span class="count                ">  36343</span><span>        }</span></pre>
-<pre><span class="lineno"><a href="#line_751" id="line_751">  751.</a></span><span class="count                ">  36343</span><span>        column += 1;</span></pre>
-<pre><span class="lineno"><a href="#line_752" id="line_752">  752.</a></span><span class="count                ">  36343</span><span>        return char;</span></pre>
-<pre><span class="lineno"><a href="#line_753" id="line_753">  753.</a></span><span class="count                ">  36343</span><span>    }</span></pre>
+<pre><span class="lineno"><a href="#line_750" id="line_750">  750.</a></span><span class="count                ">  36333</span><span>        }</span></pre>
+<pre><span class="lineno"><a href="#line_751" id="line_751">  751.</a></span><span class="count                ">  36333</span><span>        column += 1;</span></pre>
+<pre><span class="lineno"><a href="#line_752" id="line_752">  752.</a></span><span class="count                ">  36333</span><span>        return char;</span></pre>
+<pre><span class="lineno"><a href="#line_753" id="line_753">  753.</a></span><span class="count                ">  36333</span><span>    }</span></pre>
 <pre><span class="lineno"><a href="#line_754" id="line_754">  754.</a></span><span class="count                ">    368</span><span></span></pre>
 <pre><span class="lineno"><a href="#line_755" id="line_755">  755.</a></span><span class="count                ">   1170</span><span>    function back_char() {</span></pre>
 <pre><span class="lineno"><a href="#line_756" id="line_756">  756.</a></span><span class="count                ">   1170</span><span></span></pre>
@@ -1380,31 +1380,31 @@ body {
 <pre><span class="lineno"><a href="#line_1251" id="line_1251"> 1251.</a></span><span class="count                ">   3853</span><span>        snippet = &quot;&quot;;</span></pre>
 <pre><span class="lineno"><a href="#line_1252" id="line_1252"> 1252.</a></span><span class="count                ">   3853</span><span>        next_char();</span></pre>
 <pre><span class="lineno"><a href="#line_1253" id="line_1253"> 1253.</a></span><span class="count                ">   3853</span><span></span></pre>
-<pre><span class="lineno"><a href="#line_1254" id="line_1254"> 1254.</a></span><span class="count                ">  33788</span><span>        return (function next() {</span></pre>
+<pre><span class="lineno"><a href="#line_1254" id="line_1254"> 1254.</a></span><span class="count                ">  33778</span><span>        return (function next() {</span></pre>
 <pre><span class="lineno"><a href="#line_1255" id="line_1255"> 1255.</a></span><span class="count                ">   3850</span><span>            if (char === quote) {</span></pre>
 <pre><span class="lineno"><a href="#line_1256" id="line_1256"> 1256.</a></span><span class="count                ">   3850</span><span>                snip();</span></pre>
 <pre><span class="lineno"><a href="#line_1257" id="line_1257"> 1257.</a></span><span class="count                ">   3850</span><span>                the_token = make(&quot;(string)&quot;, snippet);</span></pre>
 <pre><span class="lineno"><a href="#line_1258" id="line_1258"> 1258.</a></span><span class="count                ">   3850</span><span>                the_token.quote = quote;</span></pre>
 <pre><span class="lineno"><a href="#line_1259" id="line_1259"> 1259.</a></span><span class="count                ">   3850</span><span>                return the_token;</span></pre>
-<pre><span class="lineno"><a href="#line_1260" id="line_1260"> 1260.</a></span><span class="count                ">  29938</span><span>            }</span></pre>
-<pre><span class="lineno"><a href="#line_1261" id="line_1261"> 1261.</a></span><span class="count                ">  29938</span><span>            if (char === &quot;&quot;) {</span></pre>
+<pre><span class="lineno"><a href="#line_1260" id="line_1260"> 1260.</a></span><span class="count                ">  29928</span><span>            }</span></pre>
+<pre><span class="lineno"><a href="#line_1261" id="line_1261"> 1261.</a></span><span class="count                ">  29928</span><span>            if (char === &quot;&quot;) {</span></pre>
 <pre><span class="lineno"><a href="#line_1262" id="line_1262"> 1262.</a></span><span class="count                ">      1</span><span></span></pre>
 <pre><span class="lineno"><a href="#line_1263" id="line_1263"> 1263.</a></span><span class="count                ">      1</span><span>// cause: &quot;\&quot;&quot;</span></pre>
 <pre><span class="lineno"><a href="#line_1264" id="line_1264"> 1264.</a></span><span class="count                ">      1</span><span></span></pre>
 <pre><span class="lineno"><a href="#line_1265" id="line_1265"> 1265.</a></span><span class="count                ">      1</span><span>                return stop_at(&quot;unclosed_string&quot;, line, column);</span></pre>
-<pre><span class="lineno"><a href="#line_1266" id="line_1266"> 1266.</a></span><span class="count                ">  29937</span><span>            }</span></pre>
-<pre><span class="lineno"><a href="#line_1267" id="line_1267"> 1267.</a></span><span class="count                ">  29937</span><span>            if (char === &quot;\\&quot;) {</span></pre>
+<pre><span class="lineno"><a href="#line_1266" id="line_1266"> 1266.</a></span><span class="count                ">  29927</span><span>            }</span></pre>
+<pre><span class="lineno"><a href="#line_1267" id="line_1267"> 1267.</a></span><span class="count                ">  29927</span><span>            if (char === &quot;\\&quot;) {</span></pre>
 <pre><span class="lineno"><a href="#line_1268" id="line_1268"> 1268.</a></span><span class="count                ">    290</span><span>                escape(quote);</span></pre>
-<pre><span class="lineno"><a href="#line_1269" id="line_1269"> 1269.</a></span><span class="count                ">  29647</span><span>            } else if (char === &quot;`&quot;) {</span></pre>
-<pre><span class="lineno"><a href="#line_1270" id="line_1270"> 1270.</a></span><span class="count                ">  29647</span><span>                if (mega_mode) {</span></pre>
-<pre><span class="lineno"><a href="#line_1271" id="line_1271"> 1271.</a></span><span class="count                ">  29647</span><span>                    warn_at(&quot;unexpected_a&quot;, line, column, &quot;`&quot;);</span></pre>
-<pre><span class="lineno"><a href="#line_1272" id="line_1272"> 1272.</a></span><span class="count                ">  29647</span><span>                }</span></pre>
-<pre><span class="lineno"><a href="#line_1273" id="line_1273"> 1273.</a></span><span class="count                ">  29647</span><span>                next_char(&quot;`&quot;);</span></pre>
-<pre><span class="lineno"><a href="#line_1274" id="line_1274"> 1274.</a></span><span class="count                ">  29647</span><span>            } else {</span></pre>
-<pre><span class="lineno"><a href="#line_1275" id="line_1275"> 1275.</a></span><span class="count                ">  29647</span><span>                next_char();</span></pre>
-<pre><span class="lineno"><a href="#line_1276" id="line_1276"> 1276.</a></span><span class="count                ">  29935</span><span>            }</span></pre>
-<pre><span class="lineno"><a href="#line_1277" id="line_1277"> 1277.</a></span><span class="count                ">  29935</span><span>            return next();</span></pre>
-<pre><span class="lineno"><a href="#line_1278" id="line_1278"> 1278.</a></span><span class="count                ">  29935</span><span>        }());</span></pre>
+<pre><span class="lineno"><a href="#line_1269" id="line_1269"> 1269.</a></span><span class="count                ">  29637</span><span>            } else if (char === &quot;`&quot;) {</span></pre>
+<pre><span class="lineno"><a href="#line_1270" id="line_1270"> 1270.</a></span><span class="count                ">  29637</span><span>                if (mega_mode) {</span></pre>
+<pre><span class="lineno"><a href="#line_1271" id="line_1271"> 1271.</a></span><span class="count                ">  29637</span><span>                    warn_at(&quot;unexpected_a&quot;, line, column, &quot;`&quot;);</span></pre>
+<pre><span class="lineno"><a href="#line_1272" id="line_1272"> 1272.</a></span><span class="count                ">  29637</span><span>                }</span></pre>
+<pre><span class="lineno"><a href="#line_1273" id="line_1273"> 1273.</a></span><span class="count                ">  29637</span><span>                next_char(&quot;`&quot;);</span></pre>
+<pre><span class="lineno"><a href="#line_1274" id="line_1274"> 1274.</a></span><span class="count                ">  29637</span><span>            } else {</span></pre>
+<pre><span class="lineno"><a href="#line_1275" id="line_1275"> 1275.</a></span><span class="count                ">  29637</span><span>                next_char();</span></pre>
+<pre><span class="lineno"><a href="#line_1276" id="line_1276"> 1276.</a></span><span class="count                ">  29925</span><span>            }</span></pre>
+<pre><span class="lineno"><a href="#line_1277" id="line_1277"> 1277.</a></span><span class="count                ">  29925</span><span>            return next();</span></pre>
+<pre><span class="lineno"><a href="#line_1278" id="line_1278"> 1278.</a></span><span class="count                ">  29925</span><span>        }());</span></pre>
 <pre><span class="lineno"><a href="#line_1279" id="line_1279"> 1279.</a></span><span class="count                ">   3853</span><span>    }</span></pre>
 <pre><span class="lineno"><a href="#line_1280" id="line_1280"> 1280.</a></span><span class="count                ">    368</span><span></span></pre>
 <pre><span class="lineno"><a href="#line_1281" id="line_1281"> 1281.</a></span><span class="count                ">    472</span><span>    function frack() {</span></pre>
