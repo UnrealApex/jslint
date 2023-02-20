@@ -1,9 +1,12 @@
+# base - .gitignore - beg
 "*
 '*
 *.[0123456789][0123456789]
 *.lock
 *.log
 *.pyc
+*.tgz
+*.vsix
 *~
 .*
 _*
@@ -16,6 +19,5 @@ undefined
 !.gitconfig
 !.github
 !.gitignore
-
-jslint.cjs
-jslint.js
+!.npmignore
+# base - .gitignore - end

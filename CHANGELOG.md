@@ -1,30 +1,139 @@
 # Changelog
 
 # Todo
-- app - deploy jslint as chrome-extension.
-- ci - use badge to indicate release-version so README.md doesnt have to to be updated every release.
-- cli - add command `report`.
-- compatibility - align with eslint and jshint with new warning that operators should be place at end-of-line.
+- doc - document supported/unsupported es6+ features
 - coverage - add macros `/*coverage-disable*/` and `/*coverage-enable*/`.
-- jslint - add `for...of` syntax support.
 - jslint - add html and css linting back into jslint.
-- jslint - add new warning against using do-statment.
-- jslint - add new warning requiring paren around comma-separated concatenations.
-- jslint - add syntax-support for continue-label-statement.
+- jslint - add new warning requiring paren around plus-separated concatenations.
 - jslint - require regexp to use open-form.
-- jslint - simplify comments/docs by removing unnecessary grammar-article "the".
 - jslint - try to improve parser to be able to parse jquery.js without stopping.
-- jslint-refactor - migrate recursive-loops to for/while loops.
-- merge function.html and help.html into README.md
-- node - after node-v14 is deprecated, remove shell-code `export "NODE_OPTIONS=--unhandled-rejections=strict"`.
-- vim - add vim plugin.
+- jslint - unify analysis of variable-assignment/function-parameters into one function
 
-# v2021.7.1-beta
+# v2023.1.29
+- ci - in windows-ci-env, alias node=node.exe instead of using winpty for pipes
+- ci - bugfix - fix ci-shell-function shGithubFileUpload unable to upload new asset
+- ci - auto-create asset_image_logo_512.png from asset_image_logo_512.html
+- bugfix - fix shell-function shGithubCheckoutRemote not able to checkout trusted-files in non-alpha branches
+- jslint-ci - revamp auto-updating and add shell-function shGithubCheckoutRemote
+- test - print time-finished after test-run
+- jslint - hide warning about unordered case-statements behind beta-flag
+- ci - bugfix - update shell-function shCiBase() to handle undefined fileMain
+- ci - auto-update version-number in main mjs-module
+- ci - update shell-function shDirHttplinkValidate() to ignore insecure-links http://127.0.0.1, http://localhost
+
+# v2022.11.20
+- ci - update ci from node-v16 to node-v18
+- cli - remove deprecated cli-option `--mode-vim-plugin`
+- node - after node-v14 is deprecated, remove shell-code `export "NODE_OPTIONS=--unhandled-rejections=strict"`.
+- editor - update codemirror-editor to v5.65.10
+- remove obsolete help.html
+
+# v2022.9.20
+- directive - add new directive `fart` to allow complex fat-arrow
+
+# v2022.7.20
+- bugfix - warnings that should be ignored sometimes suppress legitimate warnings
+- doc - document jslint directives
+- vscode - add extra contextmenu commands "JSLint - Do Not Lint Selected Region", "JSLint - Ignore Current Line"
+
+# v2022.6.21
+- directive - add new directive `subscript` for linting of scripts targeting Google Closure Compiler
+- bugfix - fix expression after "await" mis-identified as statement
+- warning - relax warning about missing `catch` in `try...finally` statement
+- jslint - allow aliases `evil, nomen` for jslint-directives `eval, name`, respectively for backwards-compat
+- bugfix - fix broken codemirror example
+- bugfix - fix jslint not-recognizing option-chaining when comparing operands of binary operator
+- allow array-literals to directly call [...].flat() and [...].flatMap()
+
+# v2022.5.20
+- coverage-report - disable default-coverage of directory `node_modules`, but allow override with cli-option `--include-node-modules=1`
+- coverage-report - add function globExclude() to revamp coverage-report to exclude files using glob-pattern-matching
+- add codemirror-example-file jslint_wrapper_codemirror.html
+- update codemirror-editor to v5.65.3
+- wrapper - add jslint-addon for codemirror
+- allow jslint.mjs to auto-export itself to globalThis when given search-param `?window_jslint=1`
+- wrapper - add jslint-extension for vscode
+- bugfix - fix jslint falsely believing megastring literals `0` and `1` are similar
+- bugfix - fix function jstestOnExit() from exiting prematurely and suppressing additional error-messages
+
+# v2022.3.30
+- website - use localStorage to persist jslint-options selected in ui
+- website - add optional debug-mode to use sessionStorage to persist jslint-globals and jslint-source from ui
+- jslint - add numeric-separator support
+- jslint - move regexp-literals to module-level so they are explicitly cached, to improve performance
+- ci - add check for package.json.fileCount
+
+# v2022.2.20
+- test - migrate all tests to use jstestDescribe(), jstestIt()
+- fs - rename jslint-wrapper-files to jslint_wrapper_xxx.xxx
+- bugfix - fix issue #382 - make fart-related warnings more readable
+- bugfix - fix issue #382 - fix warnings against destructured fart
+- bugfix - fix issue #379 - warn against naked-statement in fart.
+- update commonjs-wrapper jslint.cjs to load jslint in strict-mode.
+
+# v2021.12.20
+- npm - add file jslint.cjs so package @jslint-org/jslint can be published as dual-module
+- jslint - relax warning "function_in_loop"
+- update function assertJsonEqual to JSON.stringify 3rd param if its an object
+
+# v2021.11.20
+- jslint - add top-level-await support
+- ci - deprecate/remove jslint.cjs from ci
+- coverage - add cli-options `--exclude=aa,bb`, `--exclude-node-modules=false`, `--include=aa,bb`
+- coverage - dedupe coverage-logic now applied when only one script passed
+- npm - add file .npmignore
+- website - add clickable-links to editor-code in report-warnings and report-functions
+
+# v2021.10.20
+- ci - add release-trigger to publish to `@jslint-org/jslint`
+- bugfix - fix coverage-report having incorrect http-link to index.html
+- bugfix - fix false warning `uninitialized 'bb'` in code `/*jslint node*/\nlet {aa:bb} = {}; bb();`
+- bugfix - fix issue #358 - switch-statement crashes jslint
+- ci - cache coverage-example node-sqlite3 to speed up ci
+- ci - rename dir .build/ to .artifact/
+- ci - update shell-function shRunWithCoverage() to reduce size of string/argument passed to nodejs by using 2-space-indent
+- cli - add cli-command jslint_plugin_vim
+- cli - add cli-command v8_coverage_report
+- cli - change cli-option `--mode-report` to cli-command `jslint_report=<filename>`
+- coverage - relax requirement for coverageDir to be in cwd
+- deprecated - cli - add cli-option `--mode-report`
+- doc - add api-documentation
+- fs - merge file asset_codemirror_rollup.css into index.html
+- fs - merge file browser.mjs into index.html
+- fs - merge file function.html into help.html
+- fs - remove little-used font asset_font_programma_bold.woff2
+- fs - rename files with dashes to files with underscore
+- jslint - disable linting of embedded javascript in markdown-files
+- jslint - relax regexp-warning against using 'space'
+- npm - add file package.json and command `npm test`
+- style - change naming-convention for non-jslint-core code from underscore to camelCase
+- test - add mocha-like test-functions jstestDescribe, jstestIt
+
+# v2021.9.20
+- jslint - add bigint support.
+- vim - add vim-plugin and file jslint.vim.
+- doc - auto-generate toc for README.md
+- jslint - rename little-used directive `debug` to `trace` to avoid confusion with non-related directive `devel`.
+
+# v2021.8.20
+- warning - disable un-ergonomic warnings restricting directive-global (missing_browser and unexpected_directive_a).
+- fs - rename file ci.sh to jslint_ci.sh.
+- license - add codemirror license to rollup-assets.
+- website - display number of warnings, properties, functions in report.
+- website - fix uiLoader getting hidden behind highlighted text.
+
+# v2021.7.24
 - bugfix - fix jslint not warning about function-redefinition when function is defined inside a call.
 - bugfix - fix website crashing when linting pure json-object.
+- ci - fix race-condition when inlining css.
+- doc - update README.md with links to archived web-demos.
+- jslint - add new beta-warning against redefining global-variables.
+- jslint - add new beta-warning if functions are unordered.
 - jslint - add new warning disallowing string-literal as property-name, e.g. {`aa`:0}.
 - jslint - comment out shebang in jslint.mjs so older ios devices can use website.
-- tests - revamp cause-based testing with more robust instrumentation.
+- jslint - deprecate directive `/*jslint eval*/` - use `//jslint-quiet` instead.
+- jslint-revamp - rearrange functions in jslint.mjs to comply with ordered-functions beta-warning.
+- jslint-revamp - revamp cause-based testing with more robust instrumentation.
 - tests - test artifact and column-position in warnings are correct.
 
 # v2021.6.30
